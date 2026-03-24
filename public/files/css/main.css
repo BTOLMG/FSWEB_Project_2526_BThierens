@@ -1,14 +1,20 @@
-:root{
-    --primary-white-color: white;
-    --primary-creme-color: #fcf9f7;
-    --primary-blue-color: #0055CC;
-    --primary-lightblue-color: #dae2ff;
-    --secondary-yellow-color: #FFED00;
-    --secondary-lightyellow-color: #fef9c3;
-    --primary-dark-color: #000000;
-    --secondary-gray-color: #333332;
+*{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
-body{
-    background-color: var(--primary-creme-color);
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--primary-creme-color);
+    color: var(--primary-dark-color);
+}
+
+main {
+    padding: 80px 1rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
 }

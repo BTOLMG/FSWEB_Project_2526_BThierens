@@ -1,0 +1,131 @@
+/* Navbar */
+:root{
+    --padding-offcanvas: 1rem;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: var(--primary-white-color);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    color: var(--primary-blue-color);
+    z-index: 1000;
+    box-shadow: 0px 20px 50px #f2efed;
+}
+
+.navbar-title {
+    margin: 0 auto;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.navbar-toggler {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    position: relative;
+}
+
+.navbar-toggler span,
+.navbar-toggler span::before,
+.navbar-toggler span::after {
+    display: block;
+    background: var(--primary-blue-color);
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+}
+
+.navbar-toggler span {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.navbar-toggler span::before {
+    content: "";
+    top: -8px;
+}
+
+.navbar-toggler span::after {
+    content: "";
+    top: 8px;
+}
+
+/* Offcanvas menu */
+.offcanvas {
+    position: fixed;
+    top: 0;
+    left: calc(-260px - 2*var(--padding-offcanvas));
+    width: 260px;
+    height: 100%;
+    background: var(--primary-white-color);
+    color: #000000;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    padding: var(--padding-offcanvas);
+    z-index: 2000;
+}
+
+.offcanvas.open {
+    left: 0;
+}
+
+.offcanvas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 0;
+    color: var(--secondary-blue-text-color);
+    text-decoration: none;
+    font-weight: 550;
+    padding-left: 20px;
+    border-radius: 10px;
+    height: 30px;
+    margin-bottom: 5px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    background-color: var(--secondary-lightyellow-color);
+
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background-color: color-mix(in srgb, var(--secondary-gray-color) 15%, transparent);
+    backdrop-filter: blur(1px);
+    display: none;
+    z-index: 999;
+}
+
+.overlay.show {
+    display: block;
+}
+
+.nav-img{
+    max-width: 10%;
+    height: auto;
+}
+
+nav .active{
+    background-color: var(--secondary-lightyellow-color);
+}
