@@ -8,3 +8,7 @@
     --primary-dark-color: #000000;
     --secondary-gray-color: #333332;
 }
+
+body{
+    background-color: var(--primary-creme-color);
+}
