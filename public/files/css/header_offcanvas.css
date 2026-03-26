@@ -83,7 +83,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1rem;
+    margin: 1rem 0 4rem 0;
 }
 
 .nav-link {
@@ -104,7 +104,6 @@
 
 .nav-link:hover {
     text-decoration: underline;
-    background-color: var(--secondary-lightyellow-color);
 
 }
 
@@ -128,4 +127,30 @@
 
 nav .active{
     background-color: var(--secondary-lightyellow-color);
+    color: var(--secondary-darkyellow-color);
+}
+
+.inloggen-btn{
+    width: auto;
+    height: auto;
+    padding: 2.5% 10% 2.5% 10% ;
+    border-radius: 20px;
+    display: block;
+    align-self: center;
+    background-color: var(--primary-blue-color);
+    border-width: 0;
+    font-weight: 550;
+    color: var(--primary-white-color);
+    cursor: pointer;
+}
+
+#closeMenuButton{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border-width: 0;
+    font-weight: 550;
+    color: var(--primary-white-color);
+    background-color: var(--primary-red-color);
+    cursor: pointer;
 }

@@ -1,10 +1,12 @@
 :root{
     --primary-white-color: #fffefe;
     --primary-creme-color: #fcf9f7;
+    --primary-red-color: #dc2626;
     --primary-blue-color: #0055CC;
     --primary-lightblue-color: #dae2ff;
     --secondary-yellow-color: #FFED00;
     --secondary-lightyellow-color: #fef9c3;
+    --secondary-darkyellow-color: #686000;
     --primary-dark-color: #000000;
     --secondary-gray-color: #333332;
     --secondary-blue-text-color: #334155;
