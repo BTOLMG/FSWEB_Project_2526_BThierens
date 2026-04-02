@@ -7,5 +7,10 @@
     <button class="navbar-toggler" id="menuButton">
         <span></span>
     </button>
-    <div class="navbar-title">header</div>
+    <div class="navbar-title">De Sociale Kaart</div>
+
+    <a href="" class="navbar-item">Hulp</a>
+    <a href="" class="navbar-item">Over ons</a>
+    @include('components.navbar.navbarUserOrLogin')
+
 </nav>

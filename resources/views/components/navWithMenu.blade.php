@@ -3,4 +3,4 @@
 </header>
 
 @include('components.navbar.navbar')
-@include('components.offcanvasMenu.offcanvasMenu')
+@include('components.navbar.offcanvasMenu.offcanvasMenu')

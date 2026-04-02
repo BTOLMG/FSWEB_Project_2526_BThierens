@@ -11,6 +11,7 @@
     height: 56px;
     background: var(--primary-white-color);
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     padding: 0 1rem;
     color: var(--primary-blue-color);
@@ -19,8 +20,7 @@
 }
 
 .navbar-title {
-    margin: 0 auto;
-    font-size: 1.2rem;
+    margin: 0 auto 0 1rem;
     font-weight: bold;
 }
 
@@ -66,13 +66,17 @@
     top: 0;
     left: calc(-260px - 2*var(--padding-offcanvas));
     width: 260px;
-    height: 100%;
+    height:100%;
     background: var(--primary-white-color);
     color: #000000;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
     transition: left 0.3s ease;
     padding: var(--padding-offcanvas);
     z-index: 2000;
+
+    display: flex;
+    flex-direction: column;
+
 }
 
 .offcanvas.open {
@@ -87,7 +91,7 @@
 }
 
 .nav-link {
-    display: block;
+    display: flex;
     padding: 0.5rem 0;
     color: var(--secondary-blue-text-color);
     text-decoration: none;
@@ -130,10 +134,14 @@ nav .active{
     color: var(--secondary-darkyellow-color);
 }
 
+.offcanvas nav{
+    flex-grow: 0.80;
+}
+
 .inloggen-btn{
     width: auto;
     height: auto;
-    padding: 2.5% 10% 2.5% 10% ;
+    padding: 10px 40px;
     border-radius: 20px;
     display: block;
     align-self: center;
@@ -147,10 +155,57 @@ nav .active{
 #closeMenuButton{
     width: 40px;
     height: 40px;
-    border-radius: 100%;
+    border-width: 0;
+    font-weight: bolder;
+    font-size: x-large;
+    color: var(--secondary-blue-text-color);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.needHelp{
+    width: 100%;
+    height: auto;
+    padding: 2.5% 10% 2.5% 10% ;
+    border-radius: 20px;
+    display: block;
+    align-self: center;
+    background-color: var(--primary-blue-color);
     border-width: 0;
     font-weight: 550;
     color: var(--primary-white-color);
-    background-color: var(--primary-red-color);
     cursor: pointer;
+}
+
+.bottomMenu{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-item{
+    color: var(--secondary-gray-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-right: 2rem;
+}
+.navbar-item:hover{
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 550px) {
+    .navbar-title {
+        display: none;
+    }
+
+    .navbar-item{
+        margin-right: 10px;
+    }
+
+    .inloggen-btn{
+        padding: 10px 20px;
+    }
+
+    .navbar-toggler{
+        margin-right: auto;
+    }
 }

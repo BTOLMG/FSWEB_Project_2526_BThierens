@@ -1,0 +1,25 @@
+<!-- Offcanvas menu -->
+<head>
+<link href="{{ asset('files/css/header_offcanvas.css') }}" rel="stylesheet">
+</head>
+
+<div class="offcanvas" id="offcanvasMenu">
+    <div class="offcanvas-header">
+        @include('components.navbar.navbarUserOrLogin')
+        <button id='closeMenuButton'>X</button>
+    </div>
+    <nav>
+        <a class="nav-link active" href="#"><img class="nav-img" src="{{ asset('files/img/menu/Home_Menu.png') }}">Home</a>
+        <a class="nav-link" href="{{ route('search', ['data' => 'noodgeval']) }}"><img class="nav-img" src="{{ asset('files/img/menu/Noodgeval_Menu.png') }}">Noodgeval</a>
+        <a class="nav-link" href="{{ route('search', ['data' => 'op-eigen-benen-staan']) }}"><img class="nav-img" src="{{ asset('files/img/menu/OpEigenBenenStaan_Menu.png') }}">Op eigen benen staan</a>
+        <a class="nav-link" href="{{ route('search', ['data' => 'mijn-gezondheid']) }}"><img class="nav-img" src="{{ asset('files/img/menu/MijnGezondheid_Menu.png') }}">Mijn gezondheid</a>
+        <a class="nav-link" href="{{ route('search', ['data' => 'mijn-rechten']) }}"><img class="nav-img" src="{{ asset('files/img/menu/MijnRechten_Menu.png') }}">Mijn rechten</a>
+        <a class="nav-link" href="{{ route('search', ['data' => 'klacht-indienen']) }}"><img class="nav-img" src="{{ asset('files/img/menu/KlachtIndienen_Menu.png') }}">Klacht indienen</a>
+    </nav>
+    <div class="bottomMenu">
+        <button class="needHelp">HULP NODIG?</button>
+    </div>
+</div>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay"></div>
