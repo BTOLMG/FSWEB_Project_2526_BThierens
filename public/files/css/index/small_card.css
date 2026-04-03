@@ -1,4 +1,3 @@
-/* Zorg dat de link de hele kaart vult en geen standaard styling heeft */
 .small-card-link {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s;
     cursor: pointer;
@@ -8,7 +7,7 @@
     display: flex;
     align-items: center;
     padding: 20px;
-    width: 30%;
+    width: 32%;
     min-width: 300px;
     box-sizing: border-box;
     text-decoration: none;
@@ -24,9 +23,7 @@
     position: relative;
     transform: translateY(-50px);
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    padding: 0px 20px;
+    justify-content: space-between;
     flex-wrap: wrap;
     text-decoration: none;
 }
@@ -74,10 +71,13 @@
     color: var(--secondary-blue-text-color);
 }
 
-/* Mobiele responsive styling */
-@media screen and (max-width: 900px) {
-    .small-card {
+@media screen and (max-width: 1000px) {
+    .small-card-link {
         width: 100%;
         justify-content: flex-start;
+    }
+    .cards-grid {
+        gap: 20px;
+        justify-content: center;
     }
 }

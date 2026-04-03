@@ -11,3 +11,7 @@ Route::get('/search', function (Request $data) {
     return view('search', ['data' => $data->get('data')]);
 })->name('search');
 
+Route::get('/favorites', function () {
+    return view('favorites');
+})->name('favorites');
+

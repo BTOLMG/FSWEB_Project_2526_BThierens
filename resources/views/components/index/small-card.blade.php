@@ -5,8 +5,8 @@
     'title' => 'Titel',
     'description' => 'description',
     'link' => '#',
-    'titleTextColor' => '',
-    'descriptionTextColor' => ''
+    'titleTextColor' => 'var(--secondary-gray-color)',
+    'descriptionTextColor' => 'var(--secondary-blue-text-color)'
 ])
 
 <head>

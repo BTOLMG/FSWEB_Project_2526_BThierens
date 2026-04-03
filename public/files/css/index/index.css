@@ -71,7 +71,27 @@ h1{
     background-color: oklch(from var(--secondary-yellow-color) calc(l * 0.95) c h);
 }
 
+.small-yellow-line{
+    margin: 5px 0 20px 0;
+    width: 120px;
+    height: 6px;
+    background-color: var(--secondary-yellow-color);
+    border: 0;
+}
 
+h2{
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    font-weight: 550;
+}
+
+.spacer-from-side{
+    padding: 0 2rem;
+}
+
+.spacer-from-bottom{
+    margin-bottom: 8rem;
+}
 
 @media screen and (max-width: 850px) {
     h1{

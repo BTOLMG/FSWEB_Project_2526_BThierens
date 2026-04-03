@@ -15,6 +15,7 @@
         <a class="nav-link" href="{{ route('search', ['data' => 'mijn-gezondheid']) }}"><img class="nav-img" src="{{ asset('files/img/menu/MijnGezondheid_Menu.png') }}">Mijn gezondheid</a>
         <a class="nav-link" href="{{ route('search', ['data' => 'mijn-rechten']) }}"><img class="nav-img" src="{{ asset('files/img/menu/MijnRechten_Menu.png') }}">Mijn rechten</a>
         <a class="nav-link" href="{{ route('search', ['data' => 'klacht-indienen']) }}"><img class="nav-img" src="{{ asset('files/img/menu/KlachtIndienen_Menu.png') }}">Klacht indienen</a>
+        <a class="nav-link" href="{{ route('favorites')}}"><img class="nav-img" src="{{ asset('files/img/menu/OpgeslagenHulp_Menu.png') }}">Opgeslagen hulp</a>
     </nav>
     <div class="bottomMenu">
         <button class="needHelp">HULP NODIG?</button>

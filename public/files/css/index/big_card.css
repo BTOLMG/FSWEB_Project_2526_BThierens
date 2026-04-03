@@ -1,0 +1,52 @@
+.big-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-noodgeval {
+    grid-row: span 2;
+    background-color: var(--primary-red-color);
+    color: var(--primary-white-color);
+}
+
+
+.card-groot {
+    grid-column: span 2;
+    background-color: var(--primary-creme-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.big-card {
+    border-radius: 24px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.big-card-icon {
+    width: auto;
+    height: 60px;
+}
+
+.big-card:hover {
+    transform: translateY(-5px);
+}
+
+.tag{
+    background-color: var(--secondary-border-blur-color);
+    color: var(--secondary-gray-color);
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+}
