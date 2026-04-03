@@ -1,0 +1,23 @@
+h1{
+    font-weight: 700;
+    letter-spacing: -1px;
+    font-size: 4rem;
+    margin-bottom: 0;
+    span{
+        margin-left: 20px;
+        color: var(--primary-blue-color);
+        font-style: italic;
+    }
+}
+
+.favorites-subtitle{
+    font-size: 1.25rem;
+    color: var(--secondary-blue-text-color);
+}
+
+.spacer-left{
+     margin-left: 10vw;
+}
+.spacer-right{
+     margin-right: 30vw;
+}
