@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $title ?? 'De Sociale Kaart' }}</title>
     <link href="{{ asset('files/css/main.css') }}" rel="stylesheet">
-    <link href="{{ asset('files/css/colors.css') }}" rel="stylesheet">
+    <link href="{{ asset('files/css/variables.css') }}" rel="stylesheet">.
+
     @yield('extra_imports')
   </head>
   <header>
