@@ -7,7 +7,7 @@
 @section('content')
     <div class="spacer-left spacer-right">
         <div class="favorites-title">
-            <h1>Mijn bewaarde <span>Hulp & Zorg</span></h1>
+            <h1>Mijn bewaarde&ensp;<span class="blue-italic">Hulp & Zorg</span></h1>
         </div>
         <div class="favorites-subtitle">
             <p>Hier vind je de diensten die je hebt opgeslagen. Een handig overzicht van de hulp en zorg die je belangrijk vindt.</p>

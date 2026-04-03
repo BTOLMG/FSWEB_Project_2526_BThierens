@@ -50,3 +50,19 @@
     font-weight: bold;
     display: inline-block;
 }
+
+
+@media screen and (max-width: 1000px) {
+    .big-cards-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        justify-content: center;
+    }
+    .card-noodgeval {
+        grid-row: auto;
+    }
+    .card-groot {
+        grid-column: auto;
+    }
+
+}

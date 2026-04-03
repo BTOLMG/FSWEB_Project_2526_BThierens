@@ -4,7 +4,6 @@ h1{
     font-size: 4rem;
     margin-bottom: 0;
     span{
-        margin-left: 20px;
         color: var(--primary-blue-color);
         font-style: italic;
     }
@@ -20,4 +19,24 @@ h1{
 }
 .spacer-right{
      margin-right: 30vw;
+}
+
+@media screen and (max-width:755px) {
+    .spacer-left{
+        margin-left: 5vw;
+    }
+    .spacer-right{
+        margin-right: 5vw;
+    }
+
+    h1{
+        text-wrap: balance;
+        font-size: 2.5rem;
+    }
+
+    .favorites-subtitle{
+        text-wrap: balance;
+        font-size: 1rem;
+    }
+
 }
