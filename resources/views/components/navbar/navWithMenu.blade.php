@@ -1,6 +1,6 @@
-<header>
+<head>
     <script src="{{ asset('files/js/header_offcanvas.js') }}" defer></script>
-</header>
+</head>
 
 @include('components.navbar.navbar')
 @include('components.navbar.offcanvasMenu.offcanvasMenu')

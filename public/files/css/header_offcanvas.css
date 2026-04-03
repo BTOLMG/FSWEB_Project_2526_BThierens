@@ -19,6 +19,10 @@
     box-shadow: 0px 20px 50px var(--secondary-border-blur-color);
 }
 
+header{
+    height: 56px;
+}
+
 .navbar-title {
     margin: 0 auto 0 1rem;
     font-weight: bold;
@@ -150,6 +154,10 @@ nav .active{
     font-weight: 550;
     color: var(--primary-white-color);
     cursor: pointer;
+}
+
+.inloggen-btn:hover{
+    background-color: oklch(from var(--primary-blue-color) calc(l * 0.95) c h);
 }
 
 #closeMenuButton{

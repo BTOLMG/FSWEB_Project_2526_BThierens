@@ -1,0 +1,83 @@
+/* Zorg dat de link de hele kaart vult en geen standaard styling heeft */
+.small-card-link {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    width: 30%;
+    min-width: 300px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.small-card-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+
+.cards-grid {
+    position: relative;
+    transform: translateY(-50px);
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 0px 20px;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+.small-card {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+.small-card-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.small-card-img img {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.small-card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.small-card-content h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-dark-color);
+}
+
+.small-card-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--secondary-blue-text-color);
+}
+
+/* Mobiele responsive styling */
+@media screen and (max-width: 900px) {
+    .small-card {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}

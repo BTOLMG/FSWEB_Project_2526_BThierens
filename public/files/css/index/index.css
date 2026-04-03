@@ -1,0 +1,132 @@
+.banner{
+    background: linear-gradient(to left, var(--primary-blue-color), var(--primary-lightdarkblue-color));
+    color: var(--primary-white-color);
+    min-height: 50vh;
+    width: auto;
+    text-align: center;
+}
+
+.navbar{
+    box-shadow: none !important;
+}
+
+h1{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-top: 5rem;
+    margin-bottom: 0.5rem;
+}
+
+.search-form {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-wrapper {
+    background-color: var(--primary-white-color);
+    display: flex;
+    align-items: center;
+    padding: 8px 10px 8px 25px;
+    border-radius: 100px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.search-icon {
+    margin-right: 15px;
+    flex-shrink: 0;
+    max-width: 25px;
+    height: auto;
+}
+
+.search-wrapper input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Styling voor de placeholder tekst */
+.search-wrapper input::placeholder {
+    color: #ccc;
+    font-weight: 400;
+}
+
+.search-wrapper button {
+    background-color: var(--secondary-yellow-color);
+    color: var(--secondary-gray-color);
+    border: none;
+    border-radius: 100px;
+    padding: 15px 40px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.search-wrapper button:hover {
+    background-color: oklch(from var(--secondary-yellow-color) calc(l * 0.95) c h);
+}
+
+
+
+@media screen and (max-width: 850px) {
+    h1{
+        font-size: 2.5rem;
+        margin-top: 3rem;
+    }
+
+    .search-form {
+        padding: 20px;
+    }
+
+    .search-wrapper {
+        padding: 6px 15px 6px 20px;
+    }
+
+    .search-icon {
+        max-width: 20px;
+        margin-right: 10px;
+    }
+
+    .search-wrapper input {
+        font-size: 16px;
+    }
+
+    .search-wrapper button {
+        padding: 12px 30px;
+        font-size: 12px;
+    }
+
+    .banner{
+        min-height: 40vh;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    h1{
+        font-size: 1.25rem;
+        margin-top: 2rem;
+        padding: 20px;
+    }
+
+    .search-wrapper input::placeholder{
+        color: transparent;
+    }
+
+    .search-wrapper input{
+        width: 80%;
+    }
+
+    .search-form{
+        padding-top: 0;
+    }
+
+    .banner{
+        min-height: 30vh;
+    }
+}
