@@ -24,6 +24,8 @@ header{
 }
 
 .navbar-title {
+    text-decoration: none;
+    color: var(--primary-blue-color);
     margin: 0 auto 0 1rem;
     font-weight: bold;
 }

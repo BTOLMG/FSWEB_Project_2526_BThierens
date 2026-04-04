@@ -32,9 +32,9 @@
         <a class="nav-link {{ Route::is('favorites') ? 'active' : '' }}" href="{{ route('favorites') }}"><img
                 class="nav-img" src="{{ asset('files/img/menu/OpgeslagenHulp_Menu.png') }}">Opgeslagen hulp</a>
     </nav>
-    <div class="bottomMenu">
+    {{-- <div class="bottomMenu">
         <button class="needHelp">HULP NODIG?</button>
-    </div>
+    </div> --}}
 </div>
 
 <!-- Overlay -->

@@ -27,6 +27,8 @@ footer {
 }
 
 .main-footer {
+    text-decoration: none;
+    color: var(--secondary-blue-text-color);
     padding: 1rem;
     white-space: nowrap;
 }

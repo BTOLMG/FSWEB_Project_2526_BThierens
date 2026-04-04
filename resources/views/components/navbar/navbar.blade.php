@@ -7,10 +7,10 @@
     <button class="navbar-toggler" id="menuButton">
         <span></span>
     </button>
-    <div class="navbar-title">De Sociale Kaart</div>
+    <a href="{{route('index')}}" class="navbar-title">De Sociale Kaart</a>
 
-    <a href="" class="navbar-item">Hulp</a>
-    <a href="" class="navbar-item">Over ons</a>
+    <a href="{{route('faq')}}" class="navbar-item">Hulp</a>
+    <a href="{{route('about')}}" class="navbar-item">Over ons</a>
     @include('components.navbar.navbarUserOrLogin')
 
 </nav>
