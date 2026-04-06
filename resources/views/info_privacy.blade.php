@@ -168,7 +168,7 @@
                         persoonsgegevens?</strong></h1>
                 <p>We verzamelen en verwerken uw persoonsgegevens in het kader van de
                     Sociale Kaart. De databank Sociale Kaart verzamelt, onderhoudt gegevens over zorgvoorzieningen
-                    en zorgverstrekkers en publiceert ze via het internet op </span><a href="https://www.desocialekaart.be"
+                    en zorgverstrekkers en publiceert ze via het internet op </span><a href="{{route('index')}}"
                         rel="noopener noreferrer" target="_blank">www.desocialekaart.be</a>.</p>
                 <p>De Sociale Kaart wil een toegangsweg bieden tot de hulpverlening die het
                     best een antwoord kan formuleren op een probleem of hulpvraag. Burgers en
@@ -239,7 +239,7 @@
                     aangevuld of verwijderd worden.</p>
                 <p>Op elke fiche staat de mogelijkheid om een 'wijziging te suggereren'. We
                     hebben het e-mailadres via het profiel en kunnen u contacteren mochten we bijkomende informatie
-                    willen. Ook via het </span><a href="https://www.desocialekaart.be/contact" rel="noopener noreferrer"
+                    willen. Ook via het </span><a href="{{route('contact')}}" rel="noopener noreferrer"
                         target="_blank">contactformulier</a> zijn we bereikbaar.</p>
                 <p>Daarnaast worden de gegevens van gebruikers (zorgverstrekkers) ook via
                     eHealth verwerkt door de aanmeldprocedure van eHealth.</p>
@@ -402,7 +402,7 @@
                     op of via de website ter beschikking gestelde informatie. Dat geldt zonder enige beperking ook
                     voor alle verliezen, werkonderbrekingen, beschadigingen van uw apparatuur, programma's of andere
                     gegevens op jouw computersysteem. De Vlaamse overheid kan niet garanderen dat de
-                    site </span><a href="https://www.desocialekaart.be" rel="noopener noreferrer"
+                    site </span><a href="{{route('index')}}" rel="noopener noreferrer"
                         target="_blank">www.desocialekaart.be</a> volledig vrij van onderbreking is en niet door
                     andere technische problemen wordt getroffen.</p>
             </div>

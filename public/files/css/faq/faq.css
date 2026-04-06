@@ -1,0 +1,226 @@
+.margin-side {
+    margin: 0 2rem;
+}
+
+.title-banner {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+        line-height: 100%;
+        font-size: 5vw;
+        font-weight: 700;
+        margin-bottom: 0;
+        color: var(--primary-dark-color);
+    }
+    p {
+        margin: 1rem 0 0 0;
+        color: var(--secondary-blue-text-color);
+        max-width: 50vw;
+    }
+}
+
+.main-container {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.sidebar-pc {
+    padding: 20px;
+    width: 100%;
+    background-color: var(--primary-white-color);
+
+    position: sticky;
+    top: 50px;
+    height: calc(100vh - 50px);
+    overflow: hidden;
+
+    border-radius: 50px 0 0 50px;
+}
+
+.sidebar-phone {
+    display: none;
+
+    padding: 20px;
+    background-color: var(--primary-white-color);
+    overflow: hidden;
+    border-radius: 50px;
+
+    .extra-info-btn{
+        margin-top: 0;
+    }
+}
+
+.sidebar-content {
+    overflow-y: auto;
+    max-height: calc(100vh - 10rem);
+
+    a {
+        text-decoration: none;
+        color: var(--primary-dark-color);
+        display: block;
+
+        p {
+            font-size: large;
+            font-weight: 500;
+            margin: 1rem 0.5rem 0.5rem 2rem;
+        }
+    }
+
+    a:hover {
+        color: var(--primary-darkblue-color);
+    }
+}
+
+.content{
+    background-color: var(--primary-white-color);
+    padding: 50px;
+    border-radius: 0 50px 50px 0;
+}
+
+
+
+.extra-info-btn {
+    width: 100%;
+    background-color: var(--primary-white-color);
+    border: 1px solid var(--secondary-lightgray-color);
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    color: var(--secondary-dark-color);
+    cursor: pointer;
+
+    p {
+        text-align: left;
+        font-weight: 500;
+        font-size: 120%;
+        margin: 0;
+    }
+}
+
+.show-extra-info-btn{
+    border-radius: 20px 20px 0 0;
+    border-bottom: none;
+    scroll-margin-top: 6rem;
+
+    .arrow{
+        transform: rotate(180deg);
+    }
+}
+
+.arrow {
+    display: inline-block;
+    margin: auto 0;
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+
+    img{
+        width: 15px;
+    }
+}
+
+.extra-info {
+    background-color: var(--primary-white-color);
+    border: 1px solid var(--secondary-lightgray-color);
+    border-top: 1px solid oklch(from var(--secondary-lightgray-color) calc(l*1.2) c h);
+    padding: 2rem;
+    padding-top: 1rem;
+    border-radius: 0 0 25px 25px;
+    display: none;
+}
+
+.show-extra-info {
+    display: block !important;
+}
+
+@media screen and (max-width: 1000px){
+    .title-banner h1{
+        font-size: 10vw;
+    }
+
+
+    .main-container{
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar-pc {
+        display: none;
+    }
+
+    .sidebar-phone{
+        display:block;
+        margin: 0;
+        padding: 20px;
+    }
+
+    .sidebar-content{
+        max-height: 50vh;
+    }
+
+    .content{
+      border-radius: 50px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .margin-side {
+        margin: 0 1rem;
+    }
+
+    .title-banner {
+        h1 {
+            font-size: 3rem;
+            font-size: clamp(2.5rem, 12vw, 4rem);
+        }
+        p {
+            max-width: 100%;
+        }
+    }
+
+    .main-container {
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+}
+
+
+.extra-info a{
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    display: inline-block;
+    max-width: 100%;
+}
+
+@media screen and (max-width: 400px) {
+    .content {
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .sidebar-phone {
+        padding: 0;
+        border-radius: 20px;
+
+        .extra-info-btn {
+            padding: 1rem;
+
+            p {
+                font-size: 110%;
+            }
+        }
+    }
+
+    .extra-info {
+        padding: 1rem;
+    }
+}

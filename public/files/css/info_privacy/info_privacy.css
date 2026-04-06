@@ -4,8 +4,6 @@
 
 .info_privacy-banner {
     margin: 2rem 0;
-    display: flex;
-    justify-content: space-between;
 
     h1 {
         line-height: 100%;
@@ -144,6 +142,7 @@
 
 .arrow {
     display: inline-block;
+    margin: auto 0;
     margin-left: 8px;
     transition: transform 0.3s ease;
 
@@ -160,10 +159,23 @@
     padding-top: 1rem;
     border-radius: 0 0 25px 25px;
     display: none;
+
+    h1{
+        font-size: large;
+    }
+
+    h1, a{
+        overflow-wrap:break-word;
+        word-wrap: break-word;
+        word-break: break-all;
+        display: inline-block;
+        max-width: 100%;
+    }
 }
 
 section{
     margin-bottom: 5rem;
+    scroll-margin-top: 6rem;
 }
 
 @media screen and (max-width: 1000px) {

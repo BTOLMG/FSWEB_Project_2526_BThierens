@@ -38,3 +38,7 @@ Route::get('/info_privacy', function () {
 Route::get('/faq', function () {
     return view('faq');
 })->name('faq');
+
+Route::get('/contact', function () {
+    return view('contact');
+})->name('contact');
