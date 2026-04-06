@@ -74,6 +74,7 @@
 @media screen and (max-width: 1000px) {
     .small-card-link {
         width: 100%;
+        min-width: auto;
         justify-content: flex-start;
     }
     .cards-grid {

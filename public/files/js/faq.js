@@ -17,11 +17,6 @@ sidebarLinks.forEach((link) => {
         const targetBtn = document.getElementById(targetId);
 
         if (targetBtn) {
-            console.log(prevTargetBtn);
-            if (prevTargetBtn) {
-                toggleContent(prevTargetBtn);
-            }
-
             if (!targetBtn.classList.contains("show-extra-info-btn")) {
                 toggleContent(targetBtn);
             }
@@ -31,12 +26,20 @@ sidebarLinks.forEach((link) => {
                 block: "start",
             });
         }
-
-        prevTargetBtn = targetBtn;
     });
 });
 
 function toggleContent(btn) {
+    if (prevTargetBtn) {
+        const dataElementId = prevTargetBtn.id.replace("-btn", "");
+        const dataElement = document.getElementById(dataElementId);
+
+        prevTargetBtn.classList.toggle("show-extra-info-btn");
+        if (dataElement) {
+            dataElement.classList.toggle("show-extra-info");
+        }
+    }
+
     const dataElementId = btn.id.replace("-btn", "");
     const dataElement = document.getElementById(dataElementId);
 
@@ -44,4 +47,6 @@ function toggleContent(btn) {
     if (dataElement) {
         dataElement.classList.toggle("show-extra-info");
     }
+
+    prevTargetBtn = btn;
 }

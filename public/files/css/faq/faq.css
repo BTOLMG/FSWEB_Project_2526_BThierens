@@ -179,7 +179,6 @@
     .title-banner {
         h1 {
             font-size: 3rem;
-            font-size: clamp(2.5rem, 12vw, 4rem);
         }
         p {
             max-width: 100%;
