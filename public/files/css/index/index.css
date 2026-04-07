@@ -32,6 +32,7 @@ h1{
     width: 100%;
     max-width: 700px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 100;
 }
 
 .search-icon {
@@ -41,16 +42,22 @@ h1{
     height: auto;
 }
 
-.search-wrapper input {
+.search-wrapper textarea {
     border: none;
     outline: none;
     flex-grow: 1;
     font-size: 18px;
-    color: #333;
+    color: var(--primary-dark-color);
+
+    resize: none;
+    overflow: hidden;
+    min-height: 23px;
+    line-height: 1;
+    position: relative;
+    top: 9px;
 }
 
-/* Styling voor de placeholder tekst */
-.search-wrapper input::placeholder {
+.search-wrapper textarea::placeholder {
     color: #ccc;
     font-weight: 400;
 }
@@ -99,20 +106,12 @@ h2{
         margin-top: 3rem;
     }
 
-    .search-form {
-        padding: 20px;
-    }
-
-    .search-wrapper {
-        padding: 6px 15px 6px 20px;
-    }
-
     .search-icon {
         max-width: 20px;
         margin-right: 10px;
     }
 
-    .search-wrapper input {
+    .search-wrapper textarea {
         font-size: 16px;
     }
 
@@ -129,17 +128,22 @@ h2{
 
 @media screen and (max-width: 550px) {
     h1{
-        font-size: 1.25rem;
+        font-size: 6vw;
         margin-top: 2rem;
         padding: 20px;
     }
 
-    .search-wrapper input::placeholder{
+    .search-wrapper textarea::placeholder{
         color: transparent;
     }
 
-    .search-wrapper input{
+    .search-wrapper textarea{
         width: 80%;
+    }
+
+
+    .search-form {
+        padding: 20px;
     }
 
     .search-form{

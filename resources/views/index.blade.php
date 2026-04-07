@@ -12,10 +12,12 @@
             <div class="search-wrapper">
                 <img src="{{ asset('files/img/search-icon.png') }}" alt="Search Icon" class="search-icon">
 
-                <input type="text" name="data" placeholder="Zoek een organisatie, hulpmiddel of thema..." required>
+                <textarea id="input-box" type="text" name="data" placeholder="Zoek een organisatie, hulpmiddel of thema..." required></textarea>
 
                 <button type="submit">ZOEKEN</button>
             </div>
+
+            @include('components.search.autocomplete')
         </form>
     </div>
 
