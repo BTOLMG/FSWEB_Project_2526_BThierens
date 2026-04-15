@@ -6,18 +6,33 @@ $faker = Faker\Factory::create('nl_BE');
 
 $dataList = [];
 
-$count = 40;
+$count = 5;
 
 for ($i = 0; $i < $count; $i++) {
+    $adressenList = [];
+    for ($j=0; $j < rand(1, 3); $j++) {
+        $adressenList[] = $faker->address;
+    }
+
+    $extraInfoList = [];
+    for ($k=0; $k < rand(0, 3); $k++) {
+        $extraInfoList[] = $faker->word;
+    }
+
     $dataList[] = [
-        'title' => $faker->company,
+        'thema' => $faker->word,
         'afstand' => rand(1, 40) . ' km',
+        'title' => $faker->company,
+        'beschrijving' => $faker->paragraph,
         'openingstijden' => $faker->time('H:i') . ' - ' . $faker->time('H:i'),
-        'adres' => $faker->streetAddress . ', ' . $faker->city,
+        'extraInfoList' => $extraInfoList,
+        'adressen' => $adressenList,
         'mail' => $faker->email,
         'telefoon' => $faker->phoneNumber,
         'website' => $faker->url,
+        'favoriet' => $faker->boolean,
         'verified' => $faker->boolean,
+        'organisatie' => $faker->boolean,
     ];
 }
 // echo '<br><br><br><br><br><br><br><br><br><br><br>';
@@ -58,14 +73,20 @@ for ($i = 0; $i < $count; $i++) {
             <div class="main-content">
                 @foreach ($dataList as $data)
                     <x-search.card
-                        :title="$data['title']"
+                        :thema="$data['thema']"
                         :afstand="$data['afstand']"
+                        :title="$data['title']"
+                        :beschrijving="$data['beschrijving']"
                         :openingstijden="$data['openingstijden']"
-                        :adressen="$data['adres']"
+                        :extraInfoList="$data['extraInfoList']"
+                        :adressen="$data['adressen']"
                         :mail="$data['mail']"
                         :telefoon="$data['telefoon']"
                         :website="$data['website']"
+                        :link="'#'"
+                        :isFavoriet="$data['favoriet']"
                         :isVerified="$data['verified']"
+                        :isOrganisatie="$data['organisatie']"
                     />
                 @endforeach
             </div>
