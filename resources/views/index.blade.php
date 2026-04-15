@@ -12,7 +12,7 @@
             <div class="search-wrapper">
                 <img src="{{ asset('files/img/search-icon.png') }}" alt="Search Icon" class="search-icon">
 
-                <textarea id="input-box" type="text" name="data" placeholder="Zoek een organisatie, hulpmiddel of thema..." required></textarea>
+                <textarea id="input-box" type="text" name="zoekterm" placeholder="Zoek een organisatie, hulpmiddel of thema..." required></textarea>
 
                 <button type="submit">ZOEKEN</button>
             </div>
@@ -36,7 +36,7 @@
             <x-index.small-card img="{{ asset('files/img/index/marker-icon.png') }}"
                 imgBackgroundColor="oklch(from var(--primary-blue-color) 0.9 calc(c * 0.25) calc(h - 8))"
                 title="Hulp in de buurt" description="Vind diensten bij jou om de hoek"
-                link="{{ route('search', ['data' => 'hulp-in-de-buurt']) }}" />
+                link="{{ route('search', ['zoekterm' => 'hulp-in-de-buurt']) }}" />
 
             <x-index.small-card imgBackgroundColor="var(--secondary-yellow-color)"
                 img="{{ asset('files/img/index/star-icon.png') }}" title="Favorieten"
@@ -46,7 +46,7 @@
                 img="{{ asset('files/img/index/astrix-icon.png') }}" title="Noodnummers"
                 description="Onmiddellijke hulp nodig?"
                 titleTextColor="oklch(from var(--primary-red-color) 0.30 calc(c * 0.8) calc(h + 2))"
-                descriptionTextColor="var(--primary-red-color)" link="{{ route('search', ['data' => 'noodgeval']) }}" />
+                descriptionTextColor="var(--primary-red-color)" link="{{ route('search', ['zoekterm' => 'noodgeval']) }}" />
         </div>
 
         <h2>Ontdek per thema</h2>
@@ -66,7 +66,7 @@
                 backgroundColor="var(--primary-red-color)"
                 description="Weet wat te doen in een noodsituatie en vind direct hulp."
                 icon="{{ asset('files/img/menu/Noodgeval_Menu.png') }}"
-                link="{{ route('search', ['data' => 'noodgeval']) }}">
+                link="{{ route('search', ['zoekterm' => 'noodgeval']) }}">
 
                 <div class="card-footer">
                     <strong>DIRECT HULP &rarr;</strong>
@@ -77,7 +77,7 @@
                 description="Alles over wonen, budget en zelfstandigheid voor jongeren."
                 backgroundColor="var(--secondary-broken-white-color)"
                 icon="{{ asset('files/img/menu/OpEigenBenenStaan_Menu.png') }}"
-                link="{{ route('search', ['data' => 'op-eigen-benen-staan']) }}">
+                link="{{ route('search', ['zoekterm' => 'op-eigen-benen-staan']) }}">
 
                 <div class="tags">
                     <span class="tag">WONEN</span>
@@ -88,13 +88,13 @@
             <x-index.big-card title="Mijn gezondheid" description="Fysiek, mentaal en alles daartussenin."
                 backgroundColor="oklch(from var(--primary-blue-color) 0.9 calc(c * 0.25) calc(h - 8))"
                 icon="{{ asset('files/img/menu/MijnGezondheid_Menu.png') }}"
-                link="{{ route('search', ['data' => 'mijn-gezondheid']) }}">
+                link="{{ route('search', ['zoekterm' => 'mijn-gezondheid']) }}">
             </x-index.big-card>
 
             <x-index.big-card title="Mijn rechten" description="Ken je rechten als jongere in Vlaanderen."
                 backgroundColor="var(--secondary-yellow-color)" titleColor="var(--secondary-blue-text-color)"
                 icon="{{ asset('files/img/menu/MijnRechten_Menu.png') }}"
-                link="{{ route('search', ['data' => 'mijn-rechten']) }}">
+                link="{{ route('search', ['zoekterm' => 'mijn-rechten']) }}">
             </x-index.big-card>
 
             <x-index.big-card class="card-groot" title="Zie uw opgeslaagde hulp"
@@ -103,7 +103,7 @@
             </x-index.big-card>
 
             <x-index.big-card title="Ik wil een klacht indienen" description="Weet waar je terecht kan met je verhaal."
-                backgroundColor="white" link="{{ route('search', ['data' => 'klacht-indienen']) }}"
+                backgroundColor="white" link="{{ route('search', ['zoekterm' => 'klacht-indienen']) }}"
                 titleColor="var(--primary-dark-color)" icon="{{ asset('files/img/menu/KlachtIndienen_Menu.png') }}">
             </x-index.big-card>
         </div>

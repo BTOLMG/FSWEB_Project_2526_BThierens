@@ -117,7 +117,13 @@ inputBox.onkeyup = function() {
         .sort((a, b) => b.relevance - a.relevance);
     }
 
-    display(result.slice(0,5), input);
+    if(result.length > 5) {
+        resultBox.classList.add("has-scrollbar");
+    }else{
+        resultBox.classList.remove("has-scrollbar");
+    }
+
+    display(result, input);
 }
 
 function display(result, searchTerm) {

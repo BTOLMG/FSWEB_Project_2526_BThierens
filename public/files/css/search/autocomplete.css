@@ -17,7 +17,19 @@
     list-style: none;
     text-align: left;
     width: 100%;
-    overflow: hidden;
+    max-height: 310px;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    scrollbar-color: var(--secondary-yellow-color) transparent;
+}
+
+.result-box ul:hover {
+    scrollbar-color: oklch(from var(--secondary-yellow-color) calc(l*0.95) c h) transparent;
+}
+
+.result-box.has-scrollbar ul{
+    border-radius: 0 0 0 2rem;
 }
 
 .result-box ul li{

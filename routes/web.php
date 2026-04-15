@@ -7,8 +7,8 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
-Route::get('/search', function (Request $data) {
-    return view('search', ['data' => $data->get('data')]);
+Route::get('/search', function (Request $zoekterm) {
+    return view('search', ['zoekterm' => $zoekterm->get('zoekterm')]);
 })->name('search');
 
 Route::get('/favorites', function () {
