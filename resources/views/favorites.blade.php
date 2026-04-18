@@ -7,7 +7,6 @@
 @section('extra_imports')
     <link href="{{ asset('files/css/favorites/favorites.css') }}" rel="stylesheet">
     <script src="{{ asset('files/js/favorites.js') }}" defer></script>
-    <script src="{{ asset('files/js/favorites_page.js') }}" defer></script>
 @stop
 
 @section('content')

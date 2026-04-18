@@ -2,7 +2,7 @@
 
 @section('extra_imports')
     <link rel="stylesheet" href="{{ asset('files/css/search/search.css') }}">
-    <script src="{{ asset('files/js/favorites.js') }}" defer></script>
+    <script src="{{ asset('files/js/search.js') }}" defer></script>
 @endsection
 
 @section('content')

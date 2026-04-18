@@ -79,8 +79,22 @@
     color: var(--primary-red-color);
 }
 
-.favoriet-button.favoriet-actief:hover {
-    color: var(--secondary-gray-color);
+
+.details-link{
+    margin-top: auto;
+    align-self: flex-start;
+    color: var(--primary-white-color);
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s;
+
+    border-radius: 20px;
+    padding: 6px 12px;
+    background-color: var(--primary-blue-color);
+}
+
+.details-link:hover{
+    background-color: oklch(from var(--primary-blue-color) calc(l * 0.85) c h);
 }
 
 

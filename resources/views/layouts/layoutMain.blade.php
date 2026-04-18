@@ -17,6 +17,9 @@
     {{-- icons from fontawesome --}}
     <script src="https://kit.fontawesome.com/ed9e8c8a7a.js" crossorigin="anonymous"></script>
 
+    {{-- Local Storage --}}
+    <script src="{{ asset('files/js/localStorageManager.js') }}" defer></script>
+
     @yield('extra_imports')
   </head>
   <header>

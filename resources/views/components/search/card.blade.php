@@ -84,6 +84,6 @@
             @endif
         @endif
 
-        <a href="{{ $link }}" class="details-link">Bekijk details</a>
+        <a href="{{ route("details", ["id" => $actorId]) }}" class="details-link">Bekijk details</a>
     </div>
 </div>
