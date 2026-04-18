@@ -10,14 +10,14 @@
     'telefoon' => null,
     'website' => null,
     'link' => null,
-    'isFavoriet' => false,
     'isVerified' => false,
     'isOrganisatie' => false,
-
+    'actorId' => null,
 ])
 
 <head>
     <link href="{{ asset('files/css/search/card.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <div class="card">
@@ -31,15 +31,9 @@
             @endif
         </div>
 
-        @if ($isFavoriet)
-            <button class="favoriet-button" title="Verwijder uit favorieten">
-                <span class="favoriet"></span>
-            </button>
-        @else
-            <button class="favoriet-button" title="Toevoegen aan favorieten">
-                <span class="niet-favoriet"></span>
-            </button>
-        @endif
+        <button class="favoriet-button" title="Toevoegen aan favorieten" data-id="{{ $actorId }}" onclick="toggleFavoriet(this)">
+            <i class="fa fa-heart"></i>
+        </button>
     </div>
 
     <div class="card-title">

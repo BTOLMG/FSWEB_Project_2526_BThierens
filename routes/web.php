@@ -2,14 +2,18 @@
 
 use Illuminate\Support\Facades\Route;
 use Symfony\Component\HttpFoundation\Request;
+use App\Http\Controllers\SearchController;
 
 Route::get('/', function () {
     return view('index');
 })->name('index');
 
-Route::get('/search', function (Request $zoekterm) {
-    return view('search', ['zoekterm' => $zoekterm->get('zoekterm')]);
-})->name('search');
+
+// Route::get('/api/autocomplete', [SearchController::class, 'autocomplete'])->name('autocomplete');
+Route::get('/api/keywords', [SearchController::class, 'keywords'])->name('keywords');
+
+Route::get('/search', [SearchController::class, 'index'])->name('search');
+
 
 Route::get('/favorites', function () {
     return view('favorites');

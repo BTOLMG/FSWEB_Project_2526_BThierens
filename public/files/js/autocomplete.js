@@ -1,110 +1,19 @@
-let tempKeywords = [
-    'hulp',
-    'welzijn',
-    'zorg',
-    'ondersteuning',
-    'maatschappelijk werk',
-    'thuiszorg',
-    'thuisverpleging',
-    'gezondheidszorg',
-    'eerstelijnszorg',
-    'psychologische hulp',
-    'psycholoog',
-    'psychiater',
-    'therapie',
-    'geestelijke gezondheid',
-    'crisisopvang',
-    'opvang',
-    'dagopvang',
-    'dagbesteding',
-    'begeleid wonen',
-    'woonondersteuning',
-    'woonzorgcentrum',
-    'ouderenzorg',
-    'seniorenwerking',
-    'mantelzorg',
-    'mantelzorgondersteuning',
-    'mobiliteitshulp',
-    'hulpmiddelen',
-    'ergotherapie',
-    'kinesitherapie',
-    'logopedie',
-    'revalidatie',
-    'preventie',
-    'verslavingszorg',
-    'drugs',
-    'alcoholhulp',
-    'armoedebestrijding',
-    'budgetbeheer',
-    'schuldbemiddeling',
-    'inkomensondersteuning',
-    'leefloon',
-    'OCMW',
-    'lokaal bestuur',
-    'buurtwerk',
-    'wijkwerking',
-    'buurtcentrum',
-    'sociale huisvesting',
-    'inclusie',
-    'handicap',
-    'handicapzorg',
-    'persoonlijke assistentie',
-    'toegankelijkheid',
-    'jeugdhulp',
-    'jongerenwerking',
-    'kinderopvang',
-    'opvoedingsondersteuning',
-    'pleegzorg',
-    'jongerenbegeleiding',
-    'consultatiebureau',
-    'vrijwilligerswerk',
-    'sociale economie',
-    'arbeidsbemiddeling',
-    'jobcoaching',
-    'tewerkstelling',
-    'activering',
-    'sociale tewerkstelling',
-    'organisaties',
-    'voorzieningen',
-    'diensten',
-    'zorgaanbieders',
-    'welzijnsaanbieders',
-    'hulpverleners',
-    'sociale kaart',
-    'sociale kaart vlaanderen',
-    'zorgaanbod',
-    'welzijnsaanbod',
-    'hulpverlening vinden',
-    'diensten in de buurt',
-    'zorggids',
-    'welzijnsgids',
-    'preventieve zorg',
-    'gezondheidsbevordering',
-    'rouwverwerking',
-    'angststoornissen',
-    'depressie hulp',
-    'zelfmoordpreventie',
-    'mobiliteit',
-    'hulpmiddelen uitleendienst',
-    'advies',
-    'informatiepunt',
-    'steunpunt',
-    'contactpunt',
-    'maatschappelijke ondersteuning'
-];
-
-
 const resultBox = document.querySelector(".result-box");
 const searchWrapper = document.querySelector(".search-wrapper");
 const inputBox = document.getElementById("input-box");
+
+let keywords = [];
+
+fetch('/api/keywords')
+    .then(res => res.json())
+    .then(data => keywords = data);
 
 inputBox.onkeyup = function() {
     let result = [];
     let input = inputBox.value.trim().toLowerCase();
 
     if (input.length > 0) {
-
-        result = tempKeywords.map((item) => {
+        result = keywords.map((item) => {
             let score = 0;
             let lowerItem = item.toLowerCase();
 
@@ -117,7 +26,7 @@ inputBox.onkeyup = function() {
         .sort((a, b) => b.relevance - a.relevance);
     }
 
-    if(result.length > 5) {
+    if(result.length > 6) {
         resultBox.classList.add("has-scrollbar");
     }else{
         resultBox.classList.remove("has-scrollbar");
@@ -132,14 +41,11 @@ function display(result, searchTerm) {
 
             // 'gi' betekent: Global (zoek overal) en Case-Insensitive (negeer hoofdletters)
             let regex = new RegExp(`(${searchTerm})`, "gi");
-
-            // $1 zegt: "Gebruik de tekst die je gevonden hebt, precies zoals die daar stond"
             let highlighted = item.name.replace(regex, "<b>$1</b>");
 
             return "<li onclick=selectedInput(this)>" + highlighted +  "</li>";
         });
         resultBox.innerHTML = "<ul>" + content.join('') + "</ul>";
-
         searchWrapper.classList.add("no-box-shadow");
 
     } else {

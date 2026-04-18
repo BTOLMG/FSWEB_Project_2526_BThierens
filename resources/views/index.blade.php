@@ -43,10 +43,10 @@
                 description="Bekijk je bewaarde hulpmiddelen" link="{{ route('favorites') }}" />
 
             <x-index.small-card backgroundColor="#fef2f2" imgBackgroundColor="var(--primary-red-color)"
-                img="{{ asset('files/img/index/astrix-icon.png') }}" title="Noodnummers"
+                img="{{ asset('files/img/index/astrix-icon.png') }}" title="Dringende hulpverlening"
                 description="Onmiddellijke hulp nodig?"
                 titleTextColor="oklch(from var(--primary-red-color) 0.30 calc(c * 0.8) calc(h + 2))"
-                descriptionTextColor="var(--primary-red-color)" link="{{ route('search', ['zoekterm' => 'noodgeval']) }}" />
+                descriptionTextColor="var(--primary-red-color)" link="{{ route('search', ['zoekterm' => 'Dringende medische hulpverlening']) }}" />
         </div>
 
         <h2>Ontdek per thema</h2>
@@ -62,11 +62,11 @@
             'titleColor' => 'var(--primary-darkblue-color)',
             'link' => '#'
             --}}
-            <x-index.big-card class="card-noodgeval" title="Er is een noodgeval" titleColor="white"
+            <x-index.big-card class="card-noodgeval" title="Ik heb dringende hulp nodig" titleColor="white"
                 backgroundColor="var(--primary-red-color)"
-                description="Weet wat te doen in een noodsituatie en vind direct hulp."
+                description="Weet waar je terecht kan voor dringende medische hulpverlening en andere noodsituaties."
                 icon="{{ asset('files/img/menu/Noodgeval_Menu.png') }}"
-                link="{{ route('search', ['zoekterm' => 'noodgeval']) }}">
+                link="{{ route('search', ['zoekterm' => 'Dringende medische hulpverlening']) }}">
 
                 <div class="card-footer">
                     <strong>DIRECT HULP &rarr;</strong>

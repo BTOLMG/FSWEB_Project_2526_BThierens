@@ -1,7 +1,7 @@
-@if (isset($_COOKIE['INGELOGD']))
+@auth
     <div class="profile-img"></div>
-    <div class="profile-header"></div>
-    <div class="profile-sub"></div>
+    <div class="profile-header">{{ auth()->user()->email }}</div>
+    <div class="profile-sub">{{ auth()->user()->rol }}</div>
 @else
     <button class="inloggen-btn">INLOGGEN</button>
-@endif
+@endauth

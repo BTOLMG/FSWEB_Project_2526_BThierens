@@ -15,7 +15,7 @@
         <a class="nav-link {{ Route::is('index') ? 'active' : '' }}" href="{{ route('index') }}"><img class="nav-img"
                 src="{{ asset('files/img/menu/Home_Menu.png') }}">Home</a>
         <a class="nav-link {{ $currentCategory == 'noodgeval' ? 'active' : '' }}"
-            href="{{ route('search', ['zoekterm' => 'noodgeval']) }}"><img class="nav-img"
+            href="{{ route('search', ['zoekterm' => 'Dringende medische hulpverlening']) }}"><img class="nav-img"
                 src="{{ asset('files/img/menu/Noodgeval_Menu.png') }}">Noodgeval</a>
         <a class="nav-link {{ $currentCategory == 'op-eigen-benen-staan' ? 'active' : '' }}"
             href="{{ route('search', ['zoekterm' => 'op-eigen-benen-staan']) }}"><img class="nav-img"
