@@ -40,6 +40,10 @@ function toggleContent(btn) {
         }
     }
 
+    if(prevTargetBtn === btn) {
+        prevTargetBtn = null;
+        return;
+    }
     const dataElementId = btn.id.replace("-btn", "");
     const dataElement = document.getElementById(dataElementId);
 

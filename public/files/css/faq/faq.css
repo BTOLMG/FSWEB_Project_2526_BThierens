@@ -75,6 +75,12 @@
     a:hover {
         color: var(--primary-darkblue-color);
     }
+
+    scrollbar-color: var(--secondary-yellow-color) transparent;
+}
+
+.sidebar-content:hover {
+    scrollbar-color: oklch(from var(--secondary-yellow-color) calc(l*0.95) c h) transparent;
 }
 
 .content{

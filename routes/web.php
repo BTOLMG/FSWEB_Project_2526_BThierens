@@ -11,13 +11,18 @@ Route::get('/', function () {
 
 // Route::get('/api/autocomplete', [SearchController::class, 'autocomplete'])->name('autocomplete');
 Route::get('/api/keywords', [SearchController::class, 'keywords'])->name('keywords');
+Route::get('/api/actoren', [SearchController::class, 'getActorsByIds'])->name('getActorsByIds');
+
 
 Route::get('/search', [SearchController::class, 'index'])->name('search');
-
 
 Route::get('/favorites', function () {
     return view('favorites');
 })->name('favorites');
+
+
+Route::get('/details/{id}', [SearchController::class, 'getAll'])->name('details');
+
 
 Route::get('/about', function () {
     return view('about');
