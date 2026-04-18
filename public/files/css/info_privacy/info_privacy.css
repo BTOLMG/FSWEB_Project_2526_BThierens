@@ -39,13 +39,19 @@
             margin: 0 0 0 1rem;
             align-content: center;
         }
+
+        i {
+            font-size: 20px;
+        }
     }
 
     a:hover {
-        img {
+        i{
             scale: 120%;
             transition: scale 0.1s;
         }
+
+
         background-color: oklch(
             from var(--secondary-border-blur-color) calc(l * 0.95) c h
         );
@@ -92,9 +98,16 @@
     }
 }
 
+.icon-container i{
+    font-size: 20px;
+}
+
 #cookies, #toegankelijkheid {
     .icon-container {
         background-color: var(--secondary-yellow-color);
+        i{
+            color: var(--secondary-darkyellow-color);
+        }
     }
     .recap-card {
         box-shadow: -10px 0px 0px 0px var(--secondary-yellow-color);
@@ -104,6 +117,9 @@
 #privacy {
     .icon-container {
         background-color: var(--primary-lightblue-color);
+        i{
+            color: var(--primary-darkblue-color);
+        }
     }
     .recap-card {
         box-shadow: -10px 0px 0px 0px var(--primary-blue-color);
@@ -145,10 +161,6 @@
     margin: auto 0;
     margin-left: 8px;
     transition: transform 0.3s ease;
-
-    img{
-        width: 15px;
-    }
 }
 
 .extra-info {

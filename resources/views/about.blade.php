@@ -3,7 +3,6 @@
 @section('extra_imports')
     <link rel="stylesheet" href="{{ asset('files/css/about/about.css') }}">
     <link rel="stylesheet" href="{{ asset('files/css/index/small_card.css') }}">
-    {{-- <script src="{{ asset('files/js/faq.js') }}" defer></script> --}}
 @endsection
 
 @section('content')
@@ -46,17 +45,16 @@
 
                 <div class="card-data">
                     <div class="card-header">
-                        <img class="header-icon" src="{{ asset('files/img/about/data-icon.png') }}">
+                        <i class="fa-solid fa-square-poll-vertical"></i>
                         <h3>Beschikbare Data</h3>
                     </div>
                     <ul class="data-list">
-                        <li><img class="li-icon" src="{{ asset('files/img/about/check-icon.png') }}"> Adresgegevens</li>
-                        <li><img class="li-icon" src="{{ asset('files/img/about/check-icon.png') }}"> Contactgegevens</li>
-                        <li><img class="li-icon" src="{{ asset('files/img/about/check-icon.png') }}"> Aanbodomschrijving
-                        </li>
-                        <li><img class="li-icon" src="{{ asset('files/img/about/check-icon.png') }}"> Doelgroepen</li>
-                        <li><img class="li-icon" src="{{ asset('files/img/about/check-icon.png') }}"> Openingsuren</li>
-                        <li><img class="li-icon" src="{{ asset('files/img/about/check-icon.png') }}"> Toegankelijkheid</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: green"></i>&#8203 Contactgegevens</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: green"></i>&#8203 Adresgegevens</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: green"></i>&#8203 Aanbodomschrijving</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: green"></i>&#8203 Doelgroepen</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: green"></i>&#8203 Openingsuren</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: green"></i>&#8203 Toegankelijkheid</li>
                     </ul>
                 </div>
             </div>
@@ -101,13 +99,13 @@
         <div class="contact-grid">
             <div class="contact-card">
                 <div class="icon-wrapper">
-                    <img src="{{ asset('files/img/index/marker-icon.png') }}" alt="Locatie">
+                    <i class="fa-solid fa-location-dot" style="font-size: 30px; color:var(--primary-darkblue-color)"></i>
                 </div>
                 <div class="contact-content">
                     <h3>Regio Antwerpen</h3>
                     <p>Phebe Devadder</p>
                     <a href="mailto:phebe.devadder@vlaanderen.be" class="contact-email">
-                        <img src="{{ asset('files/img/about/mail-icon.png') }}" alt="Mail">
+                        <i class="fa fa-envelope"></i>
                         phebe.devadder@vlaanderen.be
                     </a>
                 </div>
@@ -115,13 +113,13 @@
 
             <div class="contact-card">
                 <div class="icon-wrapper">
-                    <img src="{{ asset('files/img/index/marker-icon.png') }}" alt="Locatie">
+                    <i class="fa-solid fa-location-dot" style="font-size: 30px; color:var(--primary-darkblue-color)"></i>
                 </div>
                 <div class="contact-content">
                     <h3>Regio Limburg</h3>
                     <p>Jan Theys</p>
                     <a href="mailto:jan.theys@vlaanderen.be" class="contact-email">
-                        <img src="{{ asset('files/img/about/mail-icon.png') }}" alt="Mail">
+                        <i class="fa fa-envelope"></i>
                         jan.theys@vlaanderen.be
                     </a>
                 </div>
@@ -129,13 +127,13 @@
 
             <div class="contact-card">
                 <div class="icon-wrapper">
-                    <img src="{{ asset('files/img/index/marker-icon.png') }}" alt="Locatie">
+                    <i class="fa-solid fa-location-dot" style="font-size: 30px; color:var(--primary-darkblue-color)"></i>
                 </div>
                 <div class="contact-content">
                     <h3>Regio Oost-Vlaanderen</h3>
                     <p>Christophe Pyra</p>
                     <a href="mailto:christophe.pyra@vlaanderen.be" class="contact-email">
-                        <img src="{{ asset('files/img/about/mail-icon.png') }}" alt="Mail">
+                        <i class="fa fa-envelope"></i>
                         christophe.pyra@vlaanderen.be
                     </a>
                 </div>
@@ -144,19 +142,19 @@
 
             <div class="contact-card">
                 <div class="icon-wrapper">
-                    <img src="{{ asset('files/img/index/marker-icon.png') }}" alt="Locatie">
+                    <i class="fa-solid fa-location-dot" style="font-size: 30px; color:var(--primary-darkblue-color)"></i>
                 </div>
                 <div class="contact-content">
                     <h3>Regio Vlaams-Brabant</h3>
                     <p>Leen Lauwers</p>
                     <a href="mailto:leen.lauwers@vlaanderen.be" class="contact-email">
-                        <img src="{{ asset('files/img/about/mail-icon.png') }}" alt="Mail">
+                        <i class="fa fa-envelope"></i>
                         leen.lauwers@vlaanderen.be
                     </a>
                     <br>
                     <p>Jan Theys</p>
                     <a href="mailto:jan.theys@vlaanderen.be" class="contact-email">
-                        <img src="{{ asset('files/img/about/mail-icon.png') }}" alt="Mail">
+                        <i class="fa fa-envelope"></i>
                         jan.theys@vlaanderen.be
                     </a>
                 </div>
@@ -164,13 +162,13 @@
 
             <div class="contact-card">
                 <div class="icon-wrapper">
-                    <img src="{{ asset('files/img/index/marker-icon.png') }}" alt="Locatie">
+                    <i class="fa-solid fa-location-dot" style="font-size: 30px; color:var(--primary-darkblue-color)"></i>
                 </div>
                 <div class="contact-content">
                     <h3>Regio West-Vlaanderen</h3>
                     <p>Sven De Meulenaere</p>
                     <a href="mailto:sven.demeulenaere@vlaanderen.be" class="contact-email">
-                        <img src="{{ asset('files/img/about/mail-icon.png') }}" alt="Mail">
+                        <i class="fa fa-envelope"></i>
                         sven.demeulenaere@vlaanderen.be
                     </a>
                 </div>
@@ -178,13 +176,13 @@
 
             <div class="contact-card">
                 <div class="icon-wrapper">
-                    <img src="{{ asset('files/img/index/marker-icon.png') }}" alt="Locatie">
+                    <i class="fa-solid fa-location-dot" style="font-size: 30px; color:var(--primary-darkblue-color)"></i>
                 </div>
                 <div class="contact-content">
                     <h3>Brussels Hoofdstedelijk Gewest</h3>
                     <p>Germaine Vanderstappen</p>
                     <a href="mailto:germaine.vanderstappen@kenniscentrumwwz.be" class="contact-email">
-                        <img src="{{ asset('files/img/about/mail-icon.png') }}" alt="Mail">
+                        <i class="fa fa-envelope"></i>
                         germaine.vanderstappen@kenniscentrumwwz.be
                     </a>
                 </div>
@@ -192,13 +190,13 @@
 
             <div class="contact-card">
                 <div class="icon-wrapper">
-                    <img src="{{ asset('files/img/index/marker-icon.png') }}" alt="Locatie">
+                    <i class="fa-solid fa-location-dot" style="font-size: 30px; color:var(--primary-darkblue-color)"></i>
                 </div>
                 <div class="contact-content">
                     <h3>Ondersteuning</h3>
                     <p>Bieke Formesyn</p>
                     <a href="mailto:bieke.formesyn@vlaanderen.be" class="contact-email">
-                        <img src="{{ asset('files/img/about/mail-icon.png') }}" alt="Mail">
+                        <i class="fa fa-envelope"></i>
                         bieke.formesyn@vlaanderen.be
                     </a>
                 </div>
@@ -206,13 +204,13 @@
 
             <div class="contact-card">
                 <div class="icon-wrapper">
-                    <img src="{{ asset('files/img/index/marker-icon.png') }}" alt="Locatie">
+                    <i class="fa-solid fa-location-dot" style="font-size: 30px; color:var(--primary-darkblue-color)"></i>
                 </div>
                 <div class="contact-content">
                     <h3>Ondersteuning</h3>
                     <p>Karine Olislaegers</p>
                     <a href="mailto:karine.olislaegers@vlaanderen.be" class="contact-email">
-                        <img src="{{ asset('files/img/about/mail-icon.png') }}" alt="Mail">
+                        <i class="fa fa-envelope"></i>
                         karine.olislaegers@vlaanderen.be
                     </a>
                 </div>
@@ -220,13 +218,13 @@
 
             <div class="contact-card">
                 <div class="icon-wrapper">
-                    <img src="{{ asset('files/img/index/marker-icon.png') }}" alt="Locatie">
+                    <i class="fa-solid fa-location-dot" style="font-size: 30px; color:var(--primary-darkblue-color)"></i>
                 </div>
                 <div class="contact-content">
                     <h3>Coördinator</h3>
                     <p>Patricia Werbrouck</p>
                     <a href="mailto:patricia.werbrouck@vlaanderen.be" class="contact-email">
-                        <img src="{{ asset('files/img/about/mail-icon.png') }}" alt="Mail">
+                        <i class="fa fa-envelope"></i>
                         patricia.werbrouck@vlaanderen.be
                     </a>
                 </div>

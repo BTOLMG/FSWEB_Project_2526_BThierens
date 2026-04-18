@@ -158,11 +158,11 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 1.5rem;
-}
 
-.header-icon {
-    height: 2rem;
-    width: auto;
+    i{
+        color: var(--primary-blue-color);
+        font-size: 1.5rem;
+    }
 }
 
 .card-data h3 {
@@ -187,12 +187,6 @@
     align-items: center;
     color: var(--secondary-blue-text-color);
     font-size: 1.1rem;
-}
-
-.li-icon {
-    height: 1.2rem;
-    width: auto;
-    padding-right: 5px;
 }
 
 .contact-header {

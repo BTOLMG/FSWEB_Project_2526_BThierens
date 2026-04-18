@@ -33,17 +33,17 @@
             'titleTextColor' => '',
             'descriptionTextColor' => ''
             --}}
-            <x-index.small-card img="{{ asset('files/img/index/marker-icon.png') }}"
+            <x-index.small-card img="fa-solid fa-location-dot" imgColor="oklch(from var(--primary-blue-color) calc(l * 0.8) c h)"
                 imgBackgroundColor="oklch(from var(--primary-blue-color) 0.9 calc(c * 0.25) calc(h - 8))"
                 title="Hulp in de buurt" description="Vind diensten bij jou om de hoek"
                 link="{{ route('search', ['zoekterm' => 'hulp-in-de-buurt']) }}" />
 
-            <x-index.small-card imgBackgroundColor="var(--secondary-yellow-color)"
-                img="{{ asset('files/img/index/star-icon.png') }}" title="Favorieten"
+            <x-index.small-card imgBackgroundColor="var(--secondary-yellow-color)" imgColor="oklch(from var(--secondary-yellow-color) calc(l * 0.6) c h)"
+                img="fa-solid fa-star" title="Favorieten"
                 description="Bekijk je bewaarde hulpmiddelen" link="{{ route('favorites') }}" />
 
             <x-index.small-card backgroundColor="#fef2f2" imgBackgroundColor="var(--primary-red-color)"
-                img="{{ asset('files/img/index/astrix-icon.png') }}" title="Dringende hulpverlening"
+                img="fa-solid fa-star-of-life" title="Dringende hulpverlening"
                 description="Onmiddellijke hulp nodig?"
                 titleTextColor="oklch(from var(--primary-red-color) 0.30 calc(c * 0.8) calc(h + 2))"
                 descriptionTextColor="var(--primary-red-color)" link="{{ route('search', ['zoekterm' => 'Dringende medische hulpverlening']) }}" />
@@ -65,7 +65,7 @@
             <x-index.big-card class="card-noodgeval" title="Ik heb dringende hulp nodig" titleColor="white"
                 backgroundColor="var(--primary-red-color)"
                 description="Weet waar je terecht kan voor dringende medische hulpverlening en andere noodsituaties."
-                icon="{{ asset('files/img/menu/Noodgeval_Menu.png') }}"
+                icon='fa-solid fa-triangle-exclamation'
                 link="{{ route('search', ['zoekterm' => 'Dringende medische hulpverlening']) }}">
 
                 <div class="card-footer">
@@ -76,7 +76,7 @@
             <x-index.big-card class="card-groot" title="Ik wil op eigen benen staan"
                 description="Alles over wonen, budget en zelfstandigheid voor jongeren."
                 backgroundColor="var(--secondary-broken-white-color)"
-                icon="{{ asset('files/img/menu/OpEigenBenenStaan_Menu.png') }}"
+                icon="fa-solid fa-person-walking" iconColor="var(--primary-darkblue-color)"
                 link="{{ route('search', ['zoekterm' => 'op-eigen-benen-staan']) }}">
 
                 <div class="tags">
@@ -87,24 +87,24 @@
 
             <x-index.big-card title="Mijn gezondheid" description="Fysiek, mentaal en alles daartussenin."
                 backgroundColor="oklch(from var(--primary-blue-color) 0.9 calc(c * 0.25) calc(h - 8))"
-                icon="{{ asset('files/img/menu/MijnGezondheid_Menu.png') }}"
+                icon="fa-solid fa-heart-pulse" iconColor="oklch(from var(--primary-blue-color) calc(l * 0.8) c h)" titleColor="var(--primary-darkblue-color)"
                 link="{{ route('search', ['zoekterm' => 'mijn-gezondheid']) }}">
             </x-index.big-card>
 
             <x-index.big-card title="Mijn rechten" description="Ken je rechten als jongere in Vlaanderen."
-                backgroundColor="var(--secondary-yellow-color)" titleColor="var(--secondary-blue-text-color)"
-                icon="{{ asset('files/img/menu/MijnRechten_Menu.png') }}"
+                backgroundColor="var(--secondary-yellow-color)" titleColor="oklch(from var(--secondary-yellow-color) calc(l * 0.6) c h)"
+                icon="fa-solid fa-gavel" iconColor="oklch(from var(--secondary-yellow-color) calc(l * 0.6) c h)"
                 link="{{ route('search', ['zoekterm' => 'mijn-rechten']) }}">
             </x-index.big-card>
 
             <x-index.big-card class="card-groot" title="Zie uw opgeslaagde hulp"
                 description="Bekijk je bewaarde hulpmiddelen" backgroundColor="var(--secondary-broken-white-color)"
-                icon="{{ asset('files/img/menu/OpgeslagenHulp_Menu.png') }}" link="{{ route('favorites') }}">
+                icon="fa-solid fa-star" link="{{ route('favorites') }}" titleColor="var(--primary-dark-color)" iconColor="var(--primary-dark-color)">
             </x-index.big-card>
 
             <x-index.big-card title="Ik wil een klacht indienen" description="Weet waar je terecht kan met je verhaal."
                 backgroundColor="white" link="{{ route('search', ['zoekterm' => 'klacht-indienen']) }}"
-                titleColor="var(--primary-dark-color)" icon="{{ asset('files/img/menu/KlachtIndienen_Menu.png') }}">
+                titleColor="var(--primary-dark-color)" icon="fa-solid fa-comment-medical" iconColor="var(--primary-dark-color)">
             </x-index.big-card>
         </div>
     </div>

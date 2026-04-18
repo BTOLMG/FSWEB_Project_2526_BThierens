@@ -1,6 +1,7 @@
 @props([
     'backgroundColor' => 'var(--primary-white-color)',
     'img' => '',
+    'imgColor' => 'var(--primary-white-color)',
     'imgBackgroundColor' => 'none',
     'title' => 'Titel',
     'description' => 'description',
@@ -17,7 +18,7 @@
     <div class="small-card">
         @if ($img)
             <div class="small-card-img" style="background-color: {{ $imgBackgroundColor }}">
-                <img src="{{ $img }}" alt="{{ $title }}">
+                <i class="{{ $img }}" style="font-size: 30px; color: {{$imgColor}}"></i>
             </div>
         @endif
         <div class="small-card-content">

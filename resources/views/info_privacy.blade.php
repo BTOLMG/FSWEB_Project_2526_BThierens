@@ -17,17 +17,17 @@
 
         <div class="shortcuts">
             <a href="#cookies">
-                <img class="icon" src="{{ asset('files/img/info_privacy/cookies-icon.png') }}">
+                <i class="fa-solid fa-cookie-bite"></i>
                 <p>Cookies</p>
             </a>
 
             <a href="#privacy">
-                <img class="icon" src="{{ asset('files/img/menu/MijnRechten_Menu.png') }}">
+                <i class="fa-solid fa-gavel"></i>
                 <p>privacy</p>
             </a>
 
             <a href="#toegankelijkheid">
-                <img class="icon" src="{{ asset('files/img/info_privacy/toegankelijkheid-icon.png') }}">
+                <i class="fa-solid fa-person"></i>
                 <p>toegankelijkheid</p>
             </a>
         </div>
@@ -35,7 +35,7 @@
         <section id="cookies">
             <div class="title-container">
                 <div class="icon-container">
-                    <img class="icon" src="{{ asset('files/img/info_privacy/cookies-icon.png') }}">
+                    <i class="fa-solid fa-cookie-bite"></i>
                 </div>
                 <h2>Cookiebeleid</h2>
             </div>
@@ -54,7 +54,7 @@
             <button id="cookies-extra-info-btn" class="extra-info-btn">
                 <p>Volledige informatie
                 <p>
-                    <span class="arrow"><img src="{{ asset('files/img/info_privacy/arrow-icon.png') }}"></span>
+                    <span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
             </button>
 
             <div id="cookies-extra-info" class="extra-info">
@@ -104,7 +104,7 @@
         <section id="privacy">
             <div class="title-container">
                 <div class="icon-container">
-                    <img class="icon" src="{{ asset('files/img/menu/MijnRechten_menu.png') }}">
+                    <i class="fa-solid fa-gavel"></i>
                 </div>
                 <h2>Privacy</h2>
             </div>
@@ -126,7 +126,7 @@
             <button id="privacy-extra-info-btn" class="extra-info-btn">
                 <p>Volledige informatie
                 <p>
-                    <span class="arrow"><img src="{{ asset('files/img/info_privacy/arrow-icon.png') }}"></span>
+                    <span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
             </button>
 
             <div id="privacy-extra-info" class="extra-info">
@@ -411,7 +411,7 @@
         <section id="toegankelijkheid">
             <div class="title-container">
                 <div class="icon-container">
-                    <img class="icon" src="{{ asset('files/img/info_privacy/toegankelijkheid-icon.png') }}">
+                    <i class="fa-solid fa-person"></i>
                 </div>
                 <h2>toegankelijkheid</h2>
             </div>
@@ -429,7 +429,7 @@
             <button id="toegankelijkheid-extra-info-btn" class="extra-info-btn">
                 <p>Volledige informatie
                 <p>
-                    <span class="arrow"><img src="{{ asset('files/img/info_privacy/arrow-icon.png') }}"></span>
+                    <span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
             </button>
 
             <div id="toegankelijkheid-extra-info" class="extra-info">

@@ -12,25 +12,27 @@
     <nav>
         @php $currentCategory = request()->get('zoekterm'); @endphp
 
-        <a class="nav-link {{ Route::is('index') ? 'active' : '' }}" href="{{ route('index') }}"><img class="nav-img"
-                src="{{ asset('files/img/menu/Home_Menu.png') }}">Home</a>
+        <a class="nav-link {{ Route::is('index') ? 'active' : '' }}"
+            href="{{ route('index') }}">
+            <i class="fa-fw fa-solid fa-house"></i><p>Home</p></a>
         <a class="nav-link {{ $currentCategory == 'noodgeval' ? 'active' : '' }}"
-            href="{{ route('search', ['zoekterm' => 'Dringende medische hulpverlening']) }}"><img class="nav-img"
-                src="{{ asset('files/img/menu/Noodgeval_Menu.png') }}">Noodgeval</a>
+            href="{{ route('search', ['zoekterm' => 'Dringende medische hulpverlening']) }}">
+            <i class="fa-fw fa-solid fa-triangle-exclamation"></i><p>Noodgeval</p></a>
         <a class="nav-link {{ $currentCategory == 'op-eigen-benen-staan' ? 'active' : '' }}"
-            href="{{ route('search', ['zoekterm' => 'op-eigen-benen-staan']) }}"><img class="nav-img"
-                src="{{ asset('files/img/menu/OpEigenBenenStaan_Menu.png') }}">Op eigen benen staan</a>
+            href="{{ route('search', ['zoekterm' => 'op-eigen-benen-staan']) }}">
+            <i class="fa-fw fa-solid fa-person-walking"></i><p>Op eigen benen staan</p></a>
         <a class="nav-link {{ $currentCategory == 'mijn-gezondheid' ? 'active' : '' }}"
-            href="{{ route('search', ['zoekterm' => 'mijn-gezondheid']) }}"><img class="nav-img"
-                src="{{ asset('files/img/menu/MijnGezondheid_Menu.png') }}">Mijn gezondheid</a>
+            href="{{ route('search', ['zoekterm' => 'mijn-gezondheid']) }}">
+            <i class="fa-fw fa-solid fa-heart-pulse"></i><p>Mijn gezondheid</p></a>
         <a class="nav-link {{ $currentCategory == 'mijn-rechten' ? 'active' : '' }}"
-            href="{{ route('search', ['zoekterm' => 'mijn-rechten']) }}"><img class="nav-img"
-                src="{{ asset('files/img/menu/MijnRechten_Menu.png') }}">Mijn rechten</a>
+            href="{{ route('search', ['zoekterm' => 'mijn-rechten']) }}">
+            <i class="fa-fw fa-solid fa-gavel"></i><p>Mijn rechten</p></a>
         <a class="nav-link {{ $currentCategory == 'klacht-indienen' ? 'active' : '' }}"
-            href="{{ route('search', ['zoekterm' => 'klacht-indienen']) }}"><img class="nav-img"
-                src="{{ asset('files/img/menu/KlachtIndienen_Menu.png') }}">Klacht indienen</a>
-        <a class="nav-link {{ Route::is('favorites') ? 'active' : '' }}" href="{{ route('favorites') }}"><img
-                class="nav-img" src="{{ asset('files/img/menu/OpgeslagenHulp_Menu.png') }}">Opgeslagen hulp</a>
+            href="{{ route('search', ['zoekterm' => 'klacht-indienen']) }}">
+            <i class="fa-fw fa-solid fa-comment-medical"></i><p>Klacht indienen</p></a>
+        <a class="nav-link {{ Route::is('favorites') ? 'active' : '' }}"
+            href="{{ route('favorites') }}">
+            <i class="fa-fw fa-solid fa-star"></i><p>Opgeslagen hulp</p></a>
     </nav>
     {{-- <div class="bottomMenu">
         <button class="needHelp">HULP NODIG?</button>
