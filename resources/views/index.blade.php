@@ -12,7 +12,7 @@
             <div class="search-wrapper">
                 <img src="{{ asset('files/img/search-icon.png') }}" alt="Search Icon" class="search-icon">
 
-                <textarea id="input-box" type="text" name="zoekterm" placeholder="Zoek een organisatie, hulpmiddel of thema..." required></textarea>
+                <textarea id="input-box" type="text" name="zoekterm" placeholder="Zoek een organisatie, hulpmiddel of thema..."></textarea>
 
                 <button type="submit">ZOEKEN</button>
             </div>

@@ -9,9 +9,11 @@
     <div class="margin-side">
         <div class="search-banner">
             <h1>Hulp in jouw buurt</h1>
-            @if ($meta['zoekterm'] !== null && $actoren->count() > 0)
+            @if ($meta['zoekterm'] == null)
+                <p>We vonden {{ $actoren->count() }} resultaten</p>
+            @elseif ($actoren->count() > 0)
                 <p>We vonden {{ $actoren->count() }} resultaten voor "{{ $meta['zoekterm'] }}"</p>
-            @elseif ($actoren->count() == 0)
+            @else
                 <p>We vonden geen resultaten voor "{{ $meta['zoekterm'] }}"</p>
             @endif
         </div>

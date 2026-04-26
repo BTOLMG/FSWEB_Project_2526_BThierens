@@ -58,8 +58,7 @@
 
             <div class="sidebar-phone">
                 <button id="sidebar-phone-btn"  class="extra-info-btn">
-                    <p>Veelgestelde vragen</p><span class="arrow"><img
-                            src="{{ asset('files/img/info_privacy/arrow-icon.png') }}"></span>
+                    <p>Veelgestelde vragen</p><span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
                 </button>
                 <div id="sidebar-phone" class="extra-info sidebar-content">
                     <a id="sidebar-sociale" href="#content-btn-sociale">
@@ -103,8 +102,7 @@
                         href="https://www.vlaanderen.be/digitaal-vlaanderen/nieuws/update-beveiliging-itsme-aanmelding-op-toepassingen-van-de-vlaamse-overheid?_cldee=QD0M9QBTC9h2vx36PMO0ZkKynDiKgmyKrKOZX_WafOViQ4HFMPI7MHin1SL7EbId&amp;recipientid=contact-9f84ff65ed54eb11bb23000d3abaa1bc-6136bc4cd54d472cbbb05b7205b60d6a&amp;esid=f03c5ee3-c2f2-f011-8406-7ced8d2cb050"
                         rel="noopener noreferrer" target="_blank">website van Digitaal Vlaanderen</a>.</p>
                 <button id="content-btn-sociale"  class="extra-info-btn">
-                    <p>Wat is de Sociale Kaart?</p><span class="arrow"><img
-                            src="{{ asset('files/img/info_privacy/arrow-icon.png') }}"></span>
+                    <p>Wat is de Sociale Kaart?</p><span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
                 </button>
                 <div id="content-sociale" class="extra-info">
                     <p>De Vlaamse Sociale Kaart wil iedereen informeren over het zorgaanbod in Vlaanderen en Brussel en doet
@@ -134,8 +132,7 @@
                 </div>
                 <button id="content-btn-doel" class="extra-info-btn">
                     <p>Wat is het doel, de doelgroep en welke
-                        gegevens zijn opgenomen?</p><span class="arrow"><img
-                            src="{{ asset('files/img/info_privacy/arrow-icon.png') }}"></span>
+                        gegevens zijn opgenomen?</p><span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
                 </button>
                 <div id="content-doel" class="extra-info">
                     <p class="ql-align-justify">Elke burger heeft het recht om geïnformeerd te worden over het zorgaanbod in
@@ -149,8 +146,7 @@
                 </div>
                 <button id="content-btn-symbolen" class="extra-info-btn">
                     <p>Wat betekenen de symbolen op de
-                        website?</p><span class="arrow"><img
-                            src="{{ asset('files/img/info_privacy/arrow-icon.png') }}"></span>
+                        website?</p><span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
                 </button>
                 <div id="content-symbolen" class="extra-info">
                     <p class="ql-align-justify">Op de <a href="https://www.desocialekaart.be/handleiding/symbolen"
@@ -159,8 +155,7 @@
                 </div>
                 <button id="content-btn-actueel" class="extra-info-btn">
                     <p>Hoe actueel zijn de gegevens? Fout
-                        gezien?</p><span class="arrow"><img
-                            src="{{ asset('files/img/info_privacy/arrow-icon.png') }}"></span>
+                        gezien?</p><span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
                 </button>
                 <div id="content-actueel" class="extra-info">
                     <p>De welzijns- en gezondheidssector evolueert constant. Daarom is de betrokkenheid van voorzieningen en
@@ -182,8 +177,7 @@
                             target="_blank">contactformulier</a>.</p>
                 </div>
                 <button id="content-btn-burger" class="extra-info-btn">
-                    <p>Hoe meld ik mij aan? Als burger?</p><span class="arrow"><img
-                            src="{{ asset('files/img/info_privacy/arrow-icon.png') }}"></span>
+                    <p>Hoe meld ik mij aan? Als burger?</p><span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
                 </button>
                 <div id="content-burger" class="extra-info">
                     <p>Aanmelden gebeurt voortaan via een digitale sleutel. De stappen tonen we in <a
@@ -200,8 +194,7 @@
                 </div>
                 <button id="content-btn-aanpassen" class="extra-info-btn">
                     <p>Hoe de gegevens van mijn voorziening/praktijk
-                        aanpassen?</p><span class="arrow"><img
-                            src="{{ asset('files/img/info_privacy/arrow-icon.png') }}"></span>
+                        aanpassen?</p><span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
                 </button>
                 <div id="content-aanpassen" class="extra-info">
                     <p>Als fichebeheerder kunt u zelf uw fiche beheren. Meer uitleg over hoe u het beheer over de gegevens
@@ -215,8 +208,7 @@
                             indienen van een 'suggestie tot wijziging'.</span></p>
                 </div>
                 <button id="content-btn-fiche" class="extra-info-btn">
-                    <p>Hoe voeg ik een nieuwe fiche toe?</p><span class="arrow"><img
-                            src="{{ asset('files/img/info_privacy/arrow-icon.png') }}"></span>
+                    <p>Hoe voeg ik een nieuwe fiche toe?</p><span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
                 </button>
                 <div id="content-fiche" class="extra-info">
                     <p>U kunt zelf een nieuwe fiche toevoegen. Meer uitleg hierover kunt u op de <a
@@ -225,8 +217,7 @@
                 </div>
                 <button id="content-btn-gegevens" class="extra-info-btn">
                     <p>Hoe gegevens downloaden en
-                        hergebruiken?</p><span class="arrow"><img
-                            src="{{ asset('files/img/info_privacy/arrow-icon.png') }}"></span>
+                        hergebruiken?</p><span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
                 </button>
                 <div id="content-gegevens" class="extra-info">
 
@@ -246,8 +237,7 @@
                 </div>
                 <button id="content-btn-promotie" class="extra-info-btn">
                     <p>Welk promotie- en vormingsaanbod is
-                        er?</p><span class="arrow"><img
-                            src="{{ asset('files/img/info_privacy/arrow-icon.png') }}"></span>
+                        er?</p><span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
                 </button>
                 <div id="content-promotie" class="extra-info">
                     <p>Er zijn affiches en een flyer ter beschikking. Deze zijn te downloaden via onderstaande linken of te
@@ -292,8 +282,7 @@
                 </div>
                 <button id="content-btn-profiel" class="extra-info-btn">
                     <p>Wat gebeurt er met de gegevens die we
-                        bijhouden via mijn profiel?</p><span class="arrow"><img
-                            src="{{ asset('files/img/info_privacy/arrow-icon.png') }}"></span>
+                        bijhouden via mijn profiel?</p><span class="arrow"><i class="fa-solid fa-angle-down"></i></span>
                 </button>
                 <div id="content-profiel" class="extra-info">
                     <p>De gegevens zijn nodig om extra functionaliteiten te gebruiken: favorieten bijhouden, zoekopdrachten

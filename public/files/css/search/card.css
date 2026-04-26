@@ -75,11 +75,6 @@
     color: var(--primary-red-color);
 }
 
-.favoriet-button:hover {
-    color: var(--primary-red-color);
-}
-
-
 .details-link{
     margin-top: auto;
     align-self: flex-start;
