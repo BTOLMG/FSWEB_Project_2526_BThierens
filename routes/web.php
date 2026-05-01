@@ -1,20 +1,26 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Symfony\Component\HttpFoundation\Request;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\KaartController;
 
 Route::get('/', function () {
     return view('index');
 })->name('index');
 
 
-// Route::get('/api/autocomplete', [SearchController::class, 'autocomplete'])->name('autocomplete');
 Route::get('/api/keywords', [SearchController::class, 'keywords'])->name('keywords');
 Route::get('/api/actoren', [SearchController::class, 'getActorsByIds'])->name('getActorsByIds');
 
 
 Route::get('/search', [SearchController::class, 'index'])->name('search');
+
+
+Route::get('/api/getAllActoren', [KaartController::class, 'getActoren'])->name('getAllActoren');
+
+Route::get('/kaart', function () {
+    return view('kaart');
+})->name('kaart');
 
 Route::get('/favorites', function () {
     return view('favorites');

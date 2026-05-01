@@ -30,6 +30,9 @@
         <a class="nav-link {{ $currentCategory == 'klacht-indienen' ? 'active' : '' }}"
             href="{{ route('search', ['zoekterm' => 'klacht-indienen']) }}">
             <i class="fa-fw fa-solid fa-comment-medical"></i><p>Klacht indienen</p></a>
+        <a class="nav-link {{Route::is('kaart') ? 'active' : '' }}"
+            href="{{ route('kaart')}}">
+            <i class="fa-fw fa-solid fa-location"></i><p>Kaart weergave</p></a>
         <a class="nav-link {{ Route::is('favorites') ? 'active' : '' }}"
             href="{{ route('favorites') }}">
             <i class="fa-fw fa-solid fa-star"></i><p>Opgeslagen hulp</p></a>

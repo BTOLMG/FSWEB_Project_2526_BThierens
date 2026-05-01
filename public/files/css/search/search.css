@@ -2,6 +2,22 @@ a {
     word-break: break-word;
 }
 
+.linkToKaartPagina{
+    text-decoration: none;
+    padding: 0.2rem 1rem;
+    background-color: var(--primary-lightblue-color);
+    color: var(--primary-darkblue-color);
+    font-weight: 600;
+    border-radius: 20px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.linkToKaartPagina:hover {
+    background-color: var(--primary-darkblue-color);
+    color: var(--primary-white-color);
+}
+
 .search-wrapper{
     width: auto !important;
 }

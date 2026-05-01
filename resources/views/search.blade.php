@@ -16,6 +16,7 @@
             @else
                 <p>We vonden geen resultaten voor "<strong>{{ $meta['zoekterm'] }}</strong>"</p>
             @endif
+            <a class="linkToKaartPagina" href="{{route('kaart')}}">Zie deze op een kaart <i class="fa fa-location"></i> </a>
         </div>
 
         <div class="search-filter-main-divider">
