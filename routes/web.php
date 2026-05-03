@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\KaartController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ActorBeheerController;
+
 
 Route::get('/', function () {
     return view('index');
@@ -57,3 +61,28 @@ Route::get('/faq', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+Route::get('/login', function () { return view('login'); })->name('login');
+
+Route::post('/login-user', [UserController::class, "login"])->name('login.post');
+Route::post('/logout', [UserController::class, "logout"])->name('logout');
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    Route::post('/admin/create-actor', [AdminController::class, 'store'])->name('admin.create_actor');
+
+    Route::get('/admin/overzicht', [AdminController::class, 'overzicht'])->name('admin.overzicht');
+
+    Route::delete('/admin/actor/{actor}', [AdminController::class, 'destroyActor'])->name('admin.actor.destroy');
+    Route::delete('/admin/user/{user}', [AdminController::class, 'destroyUser'])->name('admin.user.destroy');
+
+
+    Route::get('/account', [ActorBeheerController::class, 'index'])->name('account.index');
+
+    Route::get('/account/{actor}/edit', [ActorBeheerController::class, 'edit'])->name('account.edit');
+
+    Route::post('/account/{actor}/update', [ActorBeheerController::class, 'update'])->name('account.update');
+
+    Route::post('/account/create-actor', [ActorBeheerController::class, 'store'])->name('account.create_actor');
+    Route::delete('/account/actor/{actor}', [ActorBeheerController::class, 'destroy'])->name('account.actor.destroy');
+});

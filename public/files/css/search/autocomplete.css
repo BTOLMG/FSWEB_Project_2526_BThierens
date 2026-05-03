@@ -13,6 +13,11 @@
         font-size: 12px;
     }
 }
+@media screen and (max-width: 650px) {
+    .search-wrapper textarea::placeholder{
+        color: transparent !important;
+    }
+}
 
 @media screen and (max-width: 550px) {
     .search-wrapper textarea::placeholder{

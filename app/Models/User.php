@@ -56,4 +56,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Actor::class, 'actor_id');
     }
+
+    public function actoren(): \Illuminate\Database\Eloquent\Relations\HasMany
+    {
+        return $this->hasMany(Actor::class, 'contactpersoon_gebruiker_id');
+    }
 }

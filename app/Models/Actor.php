@@ -29,6 +29,7 @@ class Actor extends Model
         'aangeboden_diensten',
         'opmerkingen',
         'last_updated',
+        'isVisible',
     ];
 
     protected function casts(): array
@@ -37,6 +38,7 @@ class Actor extends Model
             'lat'          => 'float',
             'lon'          => 'float',
             'last_updated' => 'date',
+            'isVisible'    => 'boolean',
         ];
     }
 

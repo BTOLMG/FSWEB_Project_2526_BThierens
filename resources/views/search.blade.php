@@ -16,12 +16,13 @@
             @else
                 <p>We vonden geen resultaten voor "<strong>{{ $meta['zoekterm'] }}</strong>"</p>
             @endif
-            <a class="linkToKaartPagina" href="{{route('kaart')}}">Zie deze op een kaart <i class="fa fa-location"></i> </a>
         </div>
 
         <div class="search-filter-main-divider">
             <div class="filters">
                 <form method="GET" action="{{ route('search') }}" id="filter-form">
+                    <a class="linkToKaartPagina" href="{{route('kaart')}}">Zie deze op een kaart <i class="fa fa-location"></i> </a>
+
                     <div class="search-wrapper">
                         <img src="{{ asset('files/img/search-icon.png') }}" alt="Search Icon" class="search-icon">
 

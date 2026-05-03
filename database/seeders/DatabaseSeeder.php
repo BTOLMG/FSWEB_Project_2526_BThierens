@@ -42,21 +42,22 @@ class DatabaseSeeder extends Seeder
         // ── Actoren ───────────────────────────────────────────────────────────
         $actoren = [
             [
-                'id'                => 1,
-                'publieke_naam'     => 'Groep INTRO - Regio Limburg - Vestiging Sint-Truiden',
-                'categorie_id'      => $vrij->id,
-                'betaalwijze'       => null,
-                'leeftijdscategorie'=> 'jongvolwassenen',
-                'leeftijd_min'      => 12,
-                'leeftijd_max'      => 25,
-                'straatnaam'        => 'Luikersteenweg',
-                'huisnummer'        => '7',
-                'gemeente'          => 'Sint-Truiden',
-                'postcode'          => '3800',
-                'lat'               => 50.81238628,
-                'lon'               => 5.18875002,
-                'aangeboden_diensten' => 'Vormingen rond vrije tijd, arbeid en onderwijs',
-                'last_updated'      => '2025-01-01',
+                'id'                    => 1,
+                'publieke_naam'         => 'Groep INTRO - Regio Limburg - Vestiging Sint-Truiden',
+                'categorie_id'          => $vrij->id,
+                'betaalwijze'           => null,
+                'leeftijdscategorie'    => 'jongvolwassenen',
+                'leeftijd_min'          => 12,
+                'leeftijd_max'          => 25,
+                'straatnaam'            => 'Luikersteenweg',
+                'huisnummer'            => '7',
+                'gemeente'              => 'Sint-Truiden',
+                'postcode'              => '3800',
+                'lat'                   => 50.81238628,
+                'lon'                   => 5.18875002,
+                'aangeboden_diensten'   => 'Vormingen rond vrije tijd, arbeid en onderwijs',
+                'last_updated'          => '2025-01-01',
+                'isVisible'             => true,
             ],
             [
                 'id'                => 2,
@@ -74,6 +75,7 @@ class DatabaseSeeder extends Seeder
                 'lon'               => 5.53125753,
                 'aangeboden_diensten' => 'Jeugdwerking en ateliers',
                 'last_updated'      => '2025-01-01',
+                'isVisible'             => true,
             ],
             [
                 'id'                => 3,
@@ -91,6 +93,7 @@ class DatabaseSeeder extends Seeder
                 'lon'               => 5.33152526,
                 'aangeboden_diensten' => 'Arbeidsgerichte trajecten voor jongeren',
                 'last_updated'      => '2025-01-01',
+                'isVisible'             => true,
             ],
             [
                 'id'                => 4,
@@ -108,6 +111,7 @@ class DatabaseSeeder extends Seeder
                 'lon'               => 5.3421985,
                 'aangeboden_diensten' => 'Ontmoetingsplek voor jongeren',
                 'last_updated'      => '2025-01-01',
+                'isVisible'             => true,
             ],
             [
                 'id'                => 5,
@@ -125,6 +129,7 @@ class DatabaseSeeder extends Seeder
                 'lon'               => 5.03049957,
                 'aangeboden_diensten' => 'Behandeling obesitas en diabetes',
                 'last_updated'      => '2025-01-01',
+                'isVisible'             => true,
             ],
         ];
 

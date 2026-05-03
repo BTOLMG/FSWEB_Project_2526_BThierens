@@ -10,6 +10,7 @@ class KaartController extends Controller
         $actoren = Actor::with(['categorie', 'contactgegevens'])
             ->whereNotNull('lat')
             ->whereNotNull('lon')
+            ->where('isVisible', true)
             ->get()
             ->map(function ($actor) {
                 $telefoon = $actor->contactgegevens->firstWhere('type', 'telefoonnr')?->waarde;

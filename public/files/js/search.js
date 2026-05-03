@@ -36,17 +36,17 @@ function spawnHearts(button) {
     }
 }
 
-document.querySelectorAll('.accordion-header').forEach(btn => {
-    btn.addEventListener('click', () => {
-        const panel = btn.closest('.accordion-panel');
-        const isOpen = panel.classList.toggle('open');
-        btn.setAttribute('aria-expanded', isOpen);
+document.querySelectorAll(".accordion-header").forEach((btn) => {
+    btn.addEventListener("click", () => {
+        const panel = btn.closest(".accordion-panel");
+        const isOpen = panel.classList.toggle("open");
+        btn.setAttribute("aria-expanded", isOpen);
     });
 });
 
 function removeFilter(name, value) {
-    const form = document.getElementById('filter-form');
-    form.querySelectorAll(`input[name="${name}"]`).forEach(input => {
+    const form = document.getElementById("filter-form");
+    form.querySelectorAll(`input[name="${name}"]`).forEach((input) => {
         if (input.value === value) input.checked = false;
     });
     form.submit();
@@ -99,35 +99,37 @@ function spawnHeart(button) {
 }
 
 function filterAccordionItems(input, lijstId, geenResultatenId) {
-    const zoekterm       = input.value.trim().toLowerCase();
-    const lijst          = document.getElementById(lijstId);
+    const zoekterm = input.value.trim().toLowerCase();
+    const lijst = document.getElementById(lijstId);
     const geenResultaten = document.getElementById(geenResultatenId);
-    const alleItems      = lijst.querySelectorAll('li');
+    const alleItems = lijst.querySelectorAll("li");
 
     let aantalZichtbaar = 0;
 
-    alleItems.forEach(function(item) {
-        const tekst  = item.dataset.zoekterm ?? '';
-        const tonen = zoekterm === '' || tekst.includes(zoekterm);
+    alleItems.forEach(function (item) {
+        const tekst = item.dataset.zoekterm ?? "";
+        const tonen = zoekterm === "" || tekst.includes(zoekterm);
 
-        item.style.display = tonen ? '' : 'none';
+        item.style.display = tonen ? "" : "none";
 
         if (tonen) {
             aantalZichtbaar++;
 
-            const labelEl = item.querySelector('.accordionItem-label');
+            const labelEl = item.querySelector(".accordionItem-label");
             if (labelEl) {
-                if (zoekterm === '') {
+                if (zoekterm === "") {
                     labelEl.innerHTML = labelEl.textContent;
                 } else {
                     const origineleTekst = labelEl.textContent;
-                    const regex          = new RegExp(`(${zoekterm})`, 'gi');
-                    labelEl.innerHTML    = origineleTekst.replace(regex, '<b>$1</b>');
+                    const regex = new RegExp(`(${zoekterm})`, "gi");
+                    labelEl.innerHTML = origineleTekst.replace(
+                        regex,
+                        "<b>$1</b>",
+                    );
                 }
             }
         }
     });
 
-    geenResultaten.classList.toggle('hidden', aantalZichtbaar > 0);
+    geenResultaten.classList.toggle("hidden", aantalZichtbaar > 0);
 }
-

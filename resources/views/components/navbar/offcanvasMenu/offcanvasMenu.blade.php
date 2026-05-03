@@ -37,9 +37,12 @@
             href="{{ route('favorites') }}">
             <i class="fa-fw fa-solid fa-star"></i><p>Opgeslagen hulp</p></a>
     </nav>
-    {{-- <div class="bottomMenu">
-        <button class="needHelp">HULP NODIG?</button>
-    </div> --}}
+    @auth
+        <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button type="submit" class="profile-btn uitloggen">UITLOGGEN</button>
+        </form>
+    @endauth
 </div>
 
 <!-- Overlay -->

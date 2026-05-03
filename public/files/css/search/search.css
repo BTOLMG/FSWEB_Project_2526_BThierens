@@ -2,15 +2,19 @@ a {
     word-break: break-word;
 }
 
-.linkToKaartPagina{
+.linkToKaartPagina {
     text-decoration: none;
-    padding: 0.2rem 1rem;
+    padding: 0.5rem 0;
     background-color: var(--primary-lightblue-color);
     color: var(--primary-darkblue-color);
-    font-weight: 600;
+    font-weight: 700;
     border-radius: 20px;
     transition: all 0.2s;
     cursor: pointer;
+    text-align: center;
+    max-width: 700px;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 .linkToKaartPagina:hover {
@@ -18,7 +22,7 @@ a {
     color: var(--primary-white-color);
 }
 
-.search-wrapper{
+.search-wrapper {
     width: auto !important;
 }
 
@@ -99,7 +103,7 @@ a {
 
 .filters {
     position: sticky;
-    top: 1.5rem;
+    top: 75px;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -181,15 +185,17 @@ a {
 
     &:hover {
         color: var(--primary-white-color);
-        background-color: oklch(from var(--primary-red-color) calc(l*0.90) c h);
+        background-color: oklch(
+            from var(--primary-red-color) calc(l * 0.9) c h
+        );
     }
 }
-
 
 .accordion-panel {
     width: 100%;
     max-width: 700px;
-    border-bottom: 1px solid oklch(from var(--secondary-lightgray-color) calc(l*1.15) c h);
+    border-bottom: 1px solid
+        oklch(from var(--secondary-lightgray-color) calc(l * 1.15) c h);
 }
 
 .accordion-header {
@@ -235,7 +241,6 @@ a {
     grid-template-rows: 1fr;
 }
 
-
 .accordionItem-scroll {
     overflow: hidden;
     min-height: 0;
@@ -247,7 +252,10 @@ a {
     scrollbar-color: var(--secondary-yellow-color) transparent;
 
     &:hover {
-        scrollbar-color: oklch(from var(--secondary-yellow-color) calc(l*0.95) c h) transparent;
+        scrollbar-color: oklch(
+                from var(--secondary-yellow-color) calc(l * 0.95) c h
+            )
+            transparent;
     }
 }
 
@@ -304,7 +312,7 @@ a {
     border-color: var(--primary-blue-color);
 
     &::after {
-        content: '';
+        content: "";
         display: block;
         width: 10px;
         height: 5px;
@@ -379,8 +387,6 @@ a {
     font-weight: 700;
 }
 
-
-
 @media screen and (max-width: 1000px) {
     .search-banner h1 {
         font-size: 3rem;
@@ -395,8 +401,12 @@ a {
         position: static;
     }
 
-    .search-wrapper{
+    .search-wrapper {
         width: 100% !important;
+    }
+
+    .linkToKaartPagina {
+        padding: 0.5rem 10px 0.5rem 25px;
     }
 }
 
@@ -405,7 +415,7 @@ a {
         font-size: 11vw;
     }
 
-    .search-filter-main-divider{
+    .search-filter-main-divider {
         display: flex;
         flex-direction: column;
     }

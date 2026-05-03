@@ -22,6 +22,7 @@ class SearchController extends Controller
         ];
 
         $basisQuery = Actor::with(['categorie', 'contactgegevens', 'openingsuren', 'rubrieken'])
+            ->where('isVisible', true)
             ->when($zoekterm, function ($query) use ($zoekterm) {
                 $query->where(function ($subQuery) use ($zoekterm) {
                     $subQuery
@@ -101,7 +102,7 @@ class SearchController extends Controller
 
     public function keywords()
     {
-        $actoren        = Actor::pluck('publieke_naam');
+        $actoren        = Actor::where('isVisible', true)->pluck('publieke_naam');
         $rubrieken      = Rubriek::pluck('naam');
         $categorieen    = Categorie::pluck('naam');
         $keywords       = $actoren->merge($rubrieken)->merge($categorieen)->unique()->values();
