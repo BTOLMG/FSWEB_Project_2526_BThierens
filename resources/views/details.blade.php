@@ -12,7 +12,7 @@
                 {{ $actor->categorie->naam }}
             </span>
             <h1>{{ $actor->publieke_naam }}</h1>
-            <hr class="small-yellow-line mx-auto">
+            <hr class="small-yellow-line">
             @if ($actor->aangeboden_diensten)
                 <p class="details-hero-omschrijving">{{ $actor->aangeboden_diensten }}</p>
             @endif

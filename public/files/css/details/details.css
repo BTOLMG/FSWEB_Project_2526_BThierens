@@ -30,13 +30,10 @@
 
 .small-yellow-line {
     margin: 5px 0 20px 0;
-    width: 120px;
+    width: 95%;
     height: 5px;
     background-color: var(--secondary-yellow-color);
     border: 0;
-}
-
-.mx-auto {
     margin-left: auto;
     margin-right: auto;
 }

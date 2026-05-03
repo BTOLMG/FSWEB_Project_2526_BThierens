@@ -17,4 +17,11 @@
 
     --primary-darkblue-color: #02428b;
     --primary-lightdarkblue-color: #0454b1;
+
+    --error-succes-color: #166534;
+    --error-succes-bgcolor: #dcfce7;
+
+    --error-fail-color: #fee2e2;
+    --error-fail-bgcolor: #991b1b;
+
 }

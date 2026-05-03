@@ -175,6 +175,11 @@ nav .active {
     text-decoration: none;
     transition: all 0.2s;
 
+    max-width: 130px;
+    width: 130px;
+    align-items: flex-end;
+    overflow: auto;
+
     &:hover {
         filter: brightness(0.95);
         transform: translateY(-1px);
@@ -239,5 +244,11 @@ nav .active {
 
     .navbar-toggler {
         margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .navbar-item {
+        margin-right: 5px;
     }
 }

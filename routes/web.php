@@ -6,6 +6,7 @@ use App\Http\Controllers\KaartController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ActorBeheerController;
+use App\Http\Controllers\ContactController;
 
 
 Route::get('/', function () {
@@ -61,6 +62,7 @@ Route::get('/faq', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
 Route::get('/login', function () { return view('login'); })->name('login');
 

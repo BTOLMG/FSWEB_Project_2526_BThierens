@@ -31,6 +31,14 @@
         font-weight: 600;
         font-size: 110%;
         margin-top: 2.5vh;
+        cursor: pointer;
+        text-decoration: none;
+        transition: all 0.2s;
+
+        &:hover {
+            transform: translateY(-2px);
+            filter: brightness(95%);
+        }
     }
 }
 
@@ -187,6 +195,7 @@
     align-items: center;
     color: var(--secondary-blue-text-color);
     font-size: 1.1rem;
+    gap: 5px;
 }
 
 .contact-header {

@@ -8,15 +8,15 @@
 @section('content')
     <div class="title-banner">
         <h1>
-            Uw gids door<br><span style="color: var(--primary-blue-color)">De Sociale kaart</span>.
+            Uw gids door<br><span style="color: var(--primary-blue-color)">De Sociale Kaart.</span>
         </h1>
         <p>
             De Vlaamse Sociale Kaart informeert elke burger en zorgverstrekker over het beschikbare zorg- en hulpaanbod in
             Vlaanderen en Brussel. Van kinderopvang en huisartsen tot gespecialiseerde verslavingshulp
         </p>
-        <button class="contact-btn">
+        <a href="{{ route('contact') }}" class="contact-btn">
             Contacteer ons team
-        </button>
+        </a>
     </div>
 
 
@@ -25,9 +25,12 @@
             <h2>Inleiding</h2>
             <p>
                 U kan zoeken naar antwoorden op zorgvragen zoals, “waar vind ik kinderopvang in mijn gemeente?”, “welke
-                huisartsen zijn er in mijn buurt?”, “waar vindt een verslaafd familielid hulp?”, enz. Ook hulpverleners kunnen
-                het instrument gebruiken om gericht door te verwijzen. De lokale besturen krijgen een overzicht van de welzijns-
-                en zorgactoren op hun grondgebied. Neem zeker steeds contact op met de zorgaanbieder zelf om uw zorgvraag op te
+                huisartsen zijn er in mijn buurt?”, “waar vindt een verslaafd familielid hulp?”, enz. Ook hulpverleners
+                kunnen
+                het instrument gebruiken om gericht door te verwijzen. De lokale besturen krijgen een overzicht van de
+                welzijns-
+                en zorgactoren op hun grondgebied. Neem zeker steeds contact op met de zorgaanbieder zelf om uw zorgvraag op
+                te
                 lossen.
             </p>
         </div>
@@ -49,12 +52,12 @@
                         <h3>Beschikbare Data</h3>
                     </div>
                     <ul class="data-list">
-                        <li><i class="fa-solid fa-circle-check" style="color: green"></i>&#8203 Contactgegevens</li>
-                        <li><i class="fa-solid fa-circle-check" style="color: green"></i>&#8203 Adresgegevens</li>
-                        <li><i class="fa-solid fa-circle-check" style="color: green"></i>&#8203 Aanbodomschrijving</li>
-                        <li><i class="fa-solid fa-circle-check" style="color: green"></i>&#8203 Doelgroepen</li>
-                        <li><i class="fa-solid fa-circle-check" style="color: green"></i>&#8203 Openingsuren</li>
-                        <li><i class="fa-solid fa-circle-check" style="color: green"></i>&#8203 Toegankelijkheid</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: green"></i> Contactgegevens</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: green"></i> Adresgegevens</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: green"></i> Aanbodomschrijving</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: green"></i> Doelgroepen</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: green"></i> Openingsuren</li>
+                        <li><i class="fa-solid fa-circle-check" style="color: green"></i> Toegankelijkheid</li>
                     </ul>
                 </div>
             </div>
