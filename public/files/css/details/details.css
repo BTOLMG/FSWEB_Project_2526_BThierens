@@ -1,0 +1,361 @@
+.banner {
+    background: linear-gradient(
+        to left,
+        var(--primary-blue-color),
+        var(--primary-lightdarkblue-color)
+    );
+    color: var(--primary-white-color);
+    min-height: 50vh;
+    width: auto;
+    text-align: center;
+}
+
+.navbar{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+}
+
+.banner h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--primary-white-color);
+}
+
+.banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    font-weight: 550;
+    color: var(--primary-white-color);
+}
+
+.small-yellow-line {
+    margin: 5px 0 20px 0;
+    width: 120px;
+    height: 5px;
+    background-color: var(--secondary-yellow-color);
+    border: 0;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.spacer-from-side {
+    padding: 0 2rem;
+}
+
+.spacer-from-bottom {
+    margin-bottom: 8rem;
+}
+
+.details-categorie-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 15px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 65px;
+}
+
+.details-hero-omschrijving {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.65;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+
+.details-hero-adres {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.55);
+    margin-bottom: 40px;
+}
+
+.details-body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "contact   contact   betaal"
+        "uren      locatie   locatie"
+        "uren      doelgroep doelgroep"
+        "rubrieken rubrieken rubrieken";
+    gap: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+}
+
+.card-contact {
+    grid-area: contact;
+}
+.card-betaal {
+    grid-area: betaal;
+}
+.card-uren {
+    grid-area: uren;
+}
+.card-locatie {
+    grid-area: locatie;
+}
+.card-doelgroep {
+    grid-area: doelgroep;
+}
+.card-rubrieken {
+    grid-area: rubrieken;
+}
+
+.details-card {
+    background: var(--primary-white-color);
+    border: 0.5px solid var(--secondary-border-blur-color);
+    border-radius: 15px;
+    padding: 25px 30px;
+}
+
+.details-card h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 0;
+    color: var(--primary-dark-color);
+}
+
+.details-card .small-yellow-line {
+    margin: 10px 0 20px 0;
+    width: 80px;
+    height: 5px;
+}
+
+.details-empty {
+    font-size: 15px;
+    color: var(--secondary-lightgray-color);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 0;
+    border-bottom: 0.5px solid var(--secondary-border-blur-color);
+}
+
+.contact-icon {
+    width: 35px;
+    height: 35px;
+    background: var(--secondary-broken-white-color);
+    border: 0.5px solid var(--secondary-border-blur-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 15px;
+    color: var(--primary-blue-color);
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--secondary-lightgray-color);
+    line-height: 1.5;
+}
+
+.contact-waarde {
+    font-size: 15px;
+    color: var(--primary-dark-color);
+    text-decoration: none;
+    word-break: break-word;
+    transition: all 0.2s;
+}
+
+.contact-waarde:hover {
+    color: var(--primary-blue-color);
+}
+
+.betaal-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    background: var(--secondary-broken-white-color);
+    border: 0.5px solid var(--secondary-border-blur-color);
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--primary-dark-color);
+}
+
+.betaal-badge i {
+    color: var(--primary-blue-color);
+    font-size: 15px;
+}
+
+.uren-lijst {
+    display: flex;
+    flex-direction: column;
+}
+
+.uur-rij {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 0.5px solid var(--secondary-border-blur-color);
+    gap: 40px;
+}
+
+.uur-dag {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--primary-dark-color);
+}
+
+.uur-rij.uur-gesloten .uur-dag {
+    color: var(--secondary-lightgray-color);
+    font-weight: 400;
+}
+
+.uur-tijd {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 15px;
+    color: var(--primary-dark-color);
+    font-variant-numeric: tabular-nums;
+}
+
+.uur-rij.uur-gesloten .uur-tijd {
+    font-size: 12.5px;
+    color: var(--secondary-lightgray-color);
+    font-style: italic;
+}
+
+.uur-rij.uur-gesloten .uur-tijd i {
+    color: #fca5a5;
+}
+.uur-rij:not(.uur-gesloten) .uur-tijd i {
+    color: #16a34a;
+}
+
+.info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--secondary-lightgray-color);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.info-label i {
+    color: var(--primary-blue-color);
+    width: 15px;
+    text-align: center;
+}
+
+.info-value {
+    font-size: 15px;
+    color: var(--primary-dark-color);
+    padding-left: 20px;
+}
+
+.rubriek-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.rubriek-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 15px;
+    background: var(--secondary-broken-white-color);
+    border: 0.5px solid var(--secondary-border-blur-color);
+    border-radius: 20px;
+    font-size: 15px;
+    color: var(--primary-dark-color);
+}
+
+.rubriek-tag i {
+    color: var(--primary-blue-color);
+    font-size: 10px;
+}
+
+@media screen and (max-width: 850px) {
+    .banner {
+        min-height: 40vh;
+    }
+
+    .banner h1 {
+        font-size: 2.5rem;
+    }
+
+    .details-body {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "contact   contact"
+            "betaal    betaal"
+            "uren      uren"
+            "locatie   locatie"
+            "doelgroep doelgroep"
+            "rubrieken rubrieken";
+        padding: 20px 20px 40px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .banner {
+        min-height: 30vh;
+    }
+
+    .banner h1 {
+        font-size: 6vw;
+        padding: 20px;
+    }
+
+    .details-body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "contact"
+            "betaal"
+            "uren"
+            "locatie"
+            "doelgroep"
+            "rubrieken";
+        padding: 15px 15px 30px;
+    }
+}
