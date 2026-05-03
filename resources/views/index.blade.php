@@ -35,8 +35,8 @@
             --}}
             <x-index.small-card img="fa-solid fa-location-dot" imgColor="oklch(from var(--primary-blue-color) calc(l * 0.8) c h)"
                 imgBackgroundColor="oklch(from var(--primary-blue-color) 0.9 calc(c * 0.25) calc(h - 8))"
-                title="Hulp in de buurt" description="Vind diensten bij jou om de hoek"
-                link="{{ route('search', ['zoekterm' => 'hulp-in-de-buurt']) }}" />
+                title="Kijk op de kaart" description="Vind diensten op een kaart en zie hoe dichtbij ze zijn"
+                link="{{ route('kaart') }}" />
 
             <x-index.small-card imgBackgroundColor="var(--secondary-yellow-color)" imgColor="oklch(from var(--secondary-yellow-color) calc(l * 0.6) c h)"
                 img="fa-solid fa-star" title="Favorieten"
@@ -88,7 +88,7 @@
             <x-index.big-card title="Mijn gezondheid" description="Fysiek, mentaal en alles daartussenin."
                 backgroundColor="oklch(from var(--primary-blue-color) 0.9 calc(c * 0.25) calc(h - 8))"
                 icon="fa-solid fa-heart-pulse" iconColor="oklch(from var(--primary-blue-color) calc(l * 0.8) c h)" titleColor="var(--primary-darkblue-color)"
-                link="{{ route('search', ['zoekterm' => 'mijn-gezondheid']) }}">
+                link="{{ route('search', ['zoekterm' => 'Gezondheid']) }}">
             </x-index.big-card>
 
             <x-index.big-card title="Mijn rechten" description="Ken je rechten als jongere in Vlaanderen."

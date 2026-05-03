@@ -163,14 +163,8 @@ nav .active {
     color: var(--primary-white-color);
     cursor: pointer;
     text-decoration: none;
-    transition: all 0.2s;
-
-    &:hover {
-        background-color: oklch(
-            from var(--primary-blue-color) calc(l * 0.8) c h
-        );
-    }
 }
+
 .profile-bar {
     display: flex;
     flex-direction: column;
@@ -179,6 +173,12 @@ nav .active {
     padding: 5px;
     border-radius: 10px;
     text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+        filter: brightness(0.95);
+        transform: translateY(-1px);
+    }
 }
 .profile-header {
     margin: 0;

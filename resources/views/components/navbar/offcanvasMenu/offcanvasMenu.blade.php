@@ -21,8 +21,8 @@
         <a class="nav-link {{ $currentCategory == 'op-eigen-benen-staan' ? 'active' : '' }}"
             href="{{ route('search', ['zoekterm' => 'op-eigen-benen-staan']) }}">
             <i class="fa-fw fa-solid fa-person-walking"></i><p>Op eigen benen staan</p></a>
-        <a class="nav-link {{ $currentCategory == 'mijn-gezondheid' ? 'active' : '' }}"
-            href="{{ route('search', ['zoekterm' => 'mijn-gezondheid']) }}">
+        <a class="nav-link {{ $currentCategory == 'Gezondheid' ? 'active' : '' }}"
+            href="{{ route('search', ['zoekterm' => 'Gezondheid']) }}">
             <i class="fa-fw fa-solid fa-heart-pulse"></i><p>Mijn gezondheid</p></a>
         <a class="nav-link {{ $currentCategory == 'mijn-rechten' ? 'active' : '' }}"
             href="{{ route('search', ['zoekterm' => 'mijn-rechten']) }}">
