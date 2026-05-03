@@ -3,7 +3,7 @@
 
 @section('extra_imports')
     <link href="{{ asset('files/css/index/index.css') }}" rel="stylesheet">
-@stop
+@endsection
 
 @section('content')
     <div class="banner">
@@ -108,4 +108,4 @@
             </x-index.big-card>
         </div>
     </div>
-@stop
+@endsection

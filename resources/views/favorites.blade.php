@@ -7,7 +7,7 @@
 @section('extra_imports')
     <link href="{{ asset('files/css/favorites/favorites.css') }}" rel="stylesheet">
     <script src="{{ asset('files/js/favorites.js') }}" defer></script>
-@stop
+@endsection
 
 @section('content')
     <div class="spacer-left spacer-right">
@@ -25,5 +25,4 @@
             <p id="favorites-loading">Laden...</p>
         </div>
     </div>
-
 @endsection
