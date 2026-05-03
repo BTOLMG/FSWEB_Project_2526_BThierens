@@ -8,10 +8,16 @@
     min-height: 50vh;
     width: auto;
     text-align: center;
+
+    .spacer-from-side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
-.navbar{
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1) !important;
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
 }
 
 .banner h1 {
@@ -47,9 +53,6 @@
 }
 
 .details-categorie-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
     padding: 5px 15px;
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.25);
