@@ -374,10 +374,12 @@
                 </div>
 
                 <div class="form-footer">
-                    <div class="form-footer-meta">
-                        <span class="status-dot"></span>
-                        Laatst bijgewerkt op {{ $actor->last_updated->format('d/m/Y') }}
-                    </div>
+                    @if ($actor->last_updated != null)
+                        <div class="form-footer-meta">
+                            <span class="status-dot"></span>
+                                Laatst bijgewerkt op {{ $actor->last_updated->format('d/m/Y') }}
+                        </div>
+                    @endif
                     <div class="form-footer-actions">
                         <a href="{{ route('account.index') }}" class="btn btn-secondary">Annuleren</a>
                         <button type="submit" class="btn btn-primary">Opslaan</button>
