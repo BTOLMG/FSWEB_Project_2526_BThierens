@@ -128,6 +128,8 @@
 
 .login-error {
     margin-top: 1rem;
+    padding: 10px;
+    border-radius: 5px;
     background: var(--error-fail-bgcolor);
     color: var(--error-fail-color);
     font-size: 15px;

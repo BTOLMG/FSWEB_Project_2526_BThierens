@@ -11,7 +11,7 @@
 
         <div class="beheer-header">
             <h1>Mijn Actoren</h1>
-            <p>Kies een organisatie om de gegevens te bekijken en bij te werken.</p>
+            <p>Kies een actor om de gegevens te bekijken en bij te werken.</p>
         </div>
 
         @if (session('status'))
@@ -24,10 +24,10 @@
             <div class="overzicht-blok-header">
                 <div>
                     <h2 class="overzicht-blok-titel">
-                        <i class="fa fa-building"></i> Mijn organisaties
+                        <i class="fa fa-building"></i> Mijn actoren
                     </h2>
                     <p class="overzicht-blok-sub">
-                        {{ $actoren->count() }} {{ $actoren->count() === 1 ? 'organisatie' : 'organisaties' }} gekoppeld aan jouw account
+                        {{ $actoren->count() }} {{ $actoren->count() === 1 ? 'actor' : 'actoren' }} gekoppeld aan jouw account
                     </p>
                 </div>
                 @if ($actoren->count() > 4)
@@ -99,7 +99,7 @@
                     </li>
                 @empty
                     <li class="overzicht-leeg">
-                        Er zijn nog geen organisaties aan jouw account gekoppeld. Neem contact op met de administrator.
+                        Er zijn nog geen actoren aan jouw account gekoppeld.
                     </li>
                 @endforelse
             </ul>

@@ -771,6 +771,7 @@
 
     .map-section {
         height: 45vh;
+        flex: none;
     }
 }
 

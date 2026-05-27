@@ -10,7 +10,7 @@
             <div class="admin-tabs">
                 <a href="{{ route('admin.index') }}"
                     class="admin-tab {{ request()->routeIs('admin.index') ? 'active' : '' }}">
-                    <i class="fa fa-plus"></i> Nieuwe actor
+                    <i class="fa fa-plus"></i> Nieuwe organisatie
                 </a>
                 <a href="{{ route('admin.overzicht') }}"
                     class="admin-tab {{ request()->routeIs('admin.overzicht') ? 'active' : '' }}">
@@ -32,8 +32,8 @@
                 <div class="form-section">
                     <div class="form-section-label">
                         <h3>Login Gegevens</h3>
-                        <p>De beheerder van deze actor logt in met deze gegevens.</br>
-                            Het E-mailadres is niet aanpasbaar</p>
+                        <p>De beheerder van deze organisatie kan inloggen in met deze gegevens.</br>
+                            Het E-mailadres is niet aanpasbaar.</p>
                     </div>
                     <div class="form-section-fields">
                         <div class="field field-full">

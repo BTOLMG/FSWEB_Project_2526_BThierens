@@ -11,7 +11,7 @@
         <div class="admin-tabs">
             <a href="{{ route('admin.index') }}"
                class="admin-tab {{ request()->routeIs('admin.index') ? 'active' : '' }}">
-                <i class="fa fa-plus"></i> Nieuwe actor
+                <i class="fa fa-plus"></i> Nieuwe organisatie
             </a>
             <a href="{{ route('admin.overzicht') }}"
                class="admin-tab {{ request()->routeIs('admin.overzicht') ? 'active' : '' }}">
