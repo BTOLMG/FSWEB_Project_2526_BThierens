@@ -23,7 +23,7 @@ a {
 }
 
 .search-wrapper {
-    width: auto !important;
+    width: calc(100% - 35px) !important;
 }
 
 .search-banner {
