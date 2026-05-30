@@ -2,6 +2,7 @@
 
 @section('extra_imports')
     <link rel="stylesheet" href="{{ asset('files/css/details/details.css') }}">
+    <script src="{{ asset('files/js/favorites.js') }}" defer></script>
 @endsection
 
 @section('content')
@@ -11,7 +12,18 @@
                 <i class="fa fa-tag"></i>
                 {{ $actor->categorie->naam }}
             </span>
-            <h1>{{ $actor->publieke_naam }}</h1>
+            <div class="banner-title-row">
+                <h1>{{ $actor->publieke_naam }} en {{ $actor->id }}</h1>
+                <button
+                    class="favoriet-button"
+                    title={isFavoriet ? 'Verwijder uit favorieten' : 'Toevoegen aan favorieten'}
+                    type="button"
+                    data-id="{{ $actor->id }}"
+                    onclick="toggleFavoriet(this)"
+                >
+                    <i class="fa fa-heart"></i>
+                </button>
+            </div>
             <hr class="small-yellow-line">
             @if ($actor->aangeboden_diensten)
                 <p class="details-hero-omschrijving">{{ $actor->aangeboden_diensten }}</p>
