@@ -1,3 +1,6 @@
+//https://leafletjs.com/reference.html
+//https://stackoverflow.com/questions/49333263/how-to-use-leaflet-markerclustergroup
+//https://github.com/leaflet/leaflet.markercluster
 document.addEventListener('DOMContentLoaded', () => {
     const map = L.map('map', {
         center: [50.8503463, 4.3517211],
@@ -272,8 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
             resultaat = resultaat.filter(a =>
                 a.naam?.toLowerCase().includes(zoekterm)         ||
                 a.categorie?.toLowerCase().includes(zoekterm)    ||
-                a.gemeente?.toLowerCase().includes(zoekterm)     ||
-                a.beschrijving?.toLowerCase().includes(zoekterm)
+                a.gemeente?.toLowerCase().includes(zoekterm)
             );
         }
 
@@ -397,7 +399,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 </button>
             </div>
             <h3 class="card-name">${actor.naam}</h3>
-            ${actor.beschrijving ? `<p class="card-desc">${actor.beschrijving}</p>` : ''}
             ${adres ? `<p class="card-address"><i class="fa fa-location-dot"></i>${adres}</p>` : ''}
             <div class="card-footer">
                 <a href="/details/${actor.id}" class="card-details-btn">Details bekijken</a>
@@ -506,6 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return [straat, plaats].filter(Boolean).join(', ');
     }
 
+    //https://www.geeksforgeeks.org/dsa/haversine-formula-to-find-distance-between-two-points-on-a-sphere/
     function haversineKm(lat1, lon1, lat2, lon2) {
         const R = 6371;
         const dLat = toRad(lat2 - lat1);

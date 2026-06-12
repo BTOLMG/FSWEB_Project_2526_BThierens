@@ -43,6 +43,8 @@ document.querySelectorAll('input[type="time"]').forEach((input) => {
         }
     });
 });
+
+//https://www.youtube.com/watch?v=vOPr5k_SGVA
 document
     .getElementById("geocode-btn")
     .addEventListener("click", async function () {
@@ -68,29 +70,27 @@ document
         this.disabled = true;
 
         try {
-            const url = `https://nominatim.openstreetmap.org/search?format=json&limit=1&q=${encodeURIComponent(query)}`;
-            const res = await fetch(url, {
-                headers: {
-                    "Accept-Language": "nl",
-                    "User-Agent": "ActorBeheerApp/1.0",
-                },
-            });
-            const data = await res.json();
+			fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`)
+				.then(data => data.json())
+				.then(data => {
+					if (data.length === 0) {
+						status.textContent = 'Adres niet gevonden. Controleer de velden en probeer opnieuw.';
+                        status.className = "geo-status geo-error";
+					} else {
+						document.getElementById("lat").value = parseFloat(
+                            data[0].lat,
+                        ).toFixed(6);
+                        document.getElementById("lon").value = parseFloat(
+                            data[0].lon,
+                        ).toFixed(6);
 
-            if (data.length === 0) {
-                status.textContent =
-                    "Adres niet gevonden. Controleer de velden en probeer opnieuw.";
-                status.className = "geo-status geo-error";
-            } else {
-                document.getElementById("lat").value = parseFloat(
-                    data[0].lat,
-                ).toFixed(6);
-                document.getElementById("lon").value = parseFloat(
-                    data[0].lon,
-                ).toFixed(6);
-                status.textContent = `✓ Gevonden: ${data[0].display_name.split(",").slice(0, 3).join(",")}`;
-                status.className = "geo-status geo-success";
-            }
+						const subStatus = data[0].display_name.split(',');
+						geoStatus = subStatus[0] + ',' + subStatus[1] + ',' + subStatus[2] + ',' + subStatus[6];
+
+                        status.textContent = "✓ Gevonden: " + geoStatus;
+                        status.className = "geo-status geo-success";
+					}
+				});
         } catch (e) {
             status.textContent = "Verbindingsfout. Probeer later opnieuw.";
             status.className = "geo-status geo-error";

@@ -52,6 +52,8 @@ function removeFilter(name, value) {
     form.submit();
 }
 
+// https://codepen.io/yukos/pen/ByNqVvG
+// maar dan geanimeerd zodat de vliegen omhoog en dan vallen naar beneden
 function spawnHeart(button) {
     const rect = button.getBoundingClientRect();
     const drift = (Math.random() - 0.5) * 120;
