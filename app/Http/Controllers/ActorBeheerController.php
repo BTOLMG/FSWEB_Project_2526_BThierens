@@ -19,7 +19,7 @@ class ActorBeheerController extends Controller
             return redirect('/')->with('error', 'Geen toegang.');
         }
 
-        $user   = Auth::user();
+        $user = Auth::user();
         $actoren = $user->actoren()
             ->with('categorie')
             ->orderBy('publieke_naam')
@@ -49,8 +49,8 @@ class ActorBeheerController extends Controller
 
         $request->validate([
             'publieke_naam'         => 'required|string|max:255',
-            'leeftijd_min'          => 'nullable|integer|min:0|max:99',
-            'leeftijd_max'          => 'nullable|integer|min:0|max:99',
+            'leeftijd_min'          => 'nullable|integer|min:0|max:99|lt:leeftijd_max',
+            'leeftijd_max'          => 'nullable|integer|min:0|max:99|gt:leeftijd_min',
             'lat'                   => 'nullable|numeric',
             'lon'                   => 'nullable|numeric',
             'password'              => 'nullable|min:8|confirmed',
